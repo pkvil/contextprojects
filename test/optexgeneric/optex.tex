@@ -1,0 +1,73 @@
+% Preamble
+\useOpTeX
+
+%\load[package1,package2]
+
+\enlang
+%\svlang
+%\svquotes % ?
+%\quoteschars<clqq><crqq><clq><crq>
+%\altquotes
+%\activequotes
+
+\fontfam[libertinus]
+\typosize[11/14.4]
+
+\sdef{_pgs:sixnine}{(6,9)in}
+
+\hsize=4in
+\vsize=6in
+\margins/2 a4 (0.667,,1,)in
+
+\headline = {} \footline = {\_hss\_rmfixed \_folio \_hss} 
+\headlinedist = 14pt % from baseline of \headline to top of page body 
+\footlinedist = 24pt % from last line in pagebody to baseline of footlin
+
+\def \myOrange {\setcmykcolor{0 0.5 1 0}} 
+
+\picdir={img}
+
+\picw=50pt
+\inspic picname.png
+
+\hyphenation{gal-axy}
+
+% Content
+
+\tit Document title
+\chap[label1] Chapter title
+\nonum\chap[label2] No number chapter title
+\sec[label3] Section title
+\notoc\sec[label4] No ToC section title
+\secc Subsection[label5] title
+
+As we can see in chapter~\ref[label1] on page \pgref[label1], this is a reference.
+
+These are \'single quotes' and \"double quotes".
+
+
+
+\begitems
+* First idea
+* Second idea in subitems: 
+	\begitems \style i 
+	* First sub-idea 
+	* Second sub-idea 
+	* Last sub-idea 
+	\enditems 
+* Finito 
+\enditem
+
+%\style o % small bullet 
+%\style O % big bullet (default) 
+%\style - % hyphen char 
+%\style n % numbered items 1., 2., 3., ... 
+%\style N % numbered items 1), 2), 3), ... 
+%\style i % numbered items (i), (ii), (iii), ... 
+%\style I % numbered items I, II, III, IV, ... 
+%\style a % items of type a), b), c), ... 
+%\style A % items of type A), B), C), ... 
+%\style x % small rectangle 
+%\style X % big rectangle 
+
+\lorem[1-4]

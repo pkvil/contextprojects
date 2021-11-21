@@ -1,0 +1,36 @@
+\definefontfeature
+  [duffnerebgaramond-normal]
+  [default]
+  [mode=node,ccmp=yes,calt=yes,
+   liga=yes,dlig=yes,hlig=yes,
+   kern=yes,mark=yes,mkmk=yes,
+   onum=yes,pnum=yes,salt=yes,
+   script=latn]
+
+\definefontfeature
+  [duffnerebgaramond-smallcaps]
+  [duffnerebgaramond-normal]
+  [smcp=yes,c2sc=yes]
+
+\definefontfeature
+  [duffnerebgaramond-swash]
+  [swsh=yes]
+
+\starttypescriptcollection[duffnerebgaramond]
+
+\starttypescript [serif] [duffnerebgaramond]
+       \loadfontgoodies[duffnerebgaramond]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]       [file:ebgaramond-regular] [features=duffnerebgaramond-normal]
+       \definefontsynonym [SerifItalic] [file:ebgaramond-italic]  [features=duffnerebgaramond-normal]
+       \definefontsynonym [SerifBold]   [file:ebgaramond-regular] [features=duffnerebgaramond-normal]
+       \definefontsynonym [SerifCaps]   [Serif]                   [features=duffnerebgaramond-smallcaps]
+\stoptypescript
+
+\starttypescript[duffnerebgaramond]
+     \definetypeface [duffnerebgaramond] [rm] [serif] [duffnerebgaramond] [default] [designsize=auto]
+%     \definetypeface [duffnerebgaramond] [tt] [mono]  [dejavu]     [default] [rscale=0.8] % 
+%     \definetypeface [duffnerebgaramond] [mm] [math]  [bonum]      [default] [rscale=0.8] % 
+\stoptypescript
+
+\stoptypescriptcollection

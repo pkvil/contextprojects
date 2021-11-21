@@ -1,0 +1,27 @@
+\setupbodyfont[11pt]
+
+\define\displayalphabetlength{%
+    \tracedfontname{Serif}\par
+    \setbox\alphabetbox=\hbox{abcdefghijklmnopqrstuvwxyz}
+    abcdefghijklmnopqrstuvwxyz = \the\dimexpr(\wd\alphabetbox)\par
+    \blank[line]
+}
+
+\starttext
+\newbox\alphabetbox
+\displayalphabetlength
+
+\switchtobodyfont[cochineal,11pt]
+11pt\par
+\displayalphabetlength
+
+\switchtobodyfont[ebgaramond,12pt]
+\displayalphabetlength
+
+\switchtobodyfont[dejavu,10pt]
+\displayalphabetlength
+
+\switchtobodyfont[bookman,10pt]
+\displayalphabetlength
+
+\stoptext

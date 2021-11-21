@@ -1,0 +1,85 @@
+\definemakeup[titlepage]
+    [top=,
+     doublesided=no,
+     headerstate=empty,
+     footerstate=empty,
+     align=middle,]
+
+\definefont [snsfont] [Serif*default at 72pt]
+
+\startuseMPgraphic{page}
+StartPage ;
+pickup pensquare scaled 0.2pt ;
+draw (0in,1in)--(6in,1in) withcolor black;
+draw (0in,2in)--(6in,2in) withcolor black;
+draw (0in,3in)--(6in,3in) withcolor black;
+draw (0in,4in)--(6in,4in) withcolor black;
+draw (0in,5in)--(6in,5in) withcolor black;
+draw (0in,6in)--(6in,6in) withcolor black;
+draw (0in,7in)--(6in,7in) withcolor black;
+draw (0in,8in)--(6in,8in) withcolor black;
+
+draw (0.666in,0in)--(0.666in,9in) withcolor black;
+draw (1.333in,0in)--(1.333in,9in) withcolor black;
+draw (2in,0in)--(2in,9in) withcolor black;
+draw (2.666in,0in)--(2.666in,9in) withcolor black;
+draw (3.333in,0in)--(3.333in,9in) withcolor black;
+draw (4in,0in)--(4in,9in) withcolor black;
+draw (4.666in,0in)--(4.666in,9in) withcolor black;
+draw (5.333in,0in)--(5.333in,9in) withcolor black;
+
+pickup pensquare scaled 0.4pt ;
+%fill Page withcolor .625white ;
+%fill Field[OuterMargin][Text] withcolor .850white ;
+%fill Field[Text] [Text] withcolor .850white ;
+%draw Field[OuterMargin][Text] withcolor .625red ;
+draw Field[Text] [Text] withcolor black ;
+StopPage ;
+\stopuseMPgraphic
+
+\defineoverlay[page][\useMPgraphic{page}]
+%\setupbackgrounds[page][background=page]
+
+
+\startmakeup[titlepage]
+
+    {\snsfont \subtractfeature[ligature]%
+        \kerncharacters[0.1] WORM%
+    }
+
+    \blank[10pt]
+
+    {\scd Arc 1--3}
+
+    \blank[15pt]
+
+    {\itb by} 
+
+    \blank[15pt]
+
+%    {\itc{\addfeature[swash]J}ane {\addfeature[swash]A}usten}
+     {\scd \kerncharacters[0.05] John C.~McCrae}
+
+    \blank[6pt]
+
+    {\itb under the name} 
+
+    \blank[10pt]
+
+    {\scd \kerncharacters[0.05] Wildbow}
+
+    \blank[38pt]
+
+    \dontleavehmode \externalfigure[titlepagefloralornament][width=1.7in]
+
+    \blank[38pt]
+
+    {\tfa \addfeature[swash]Q}uat Books, Eslöv \par 2021
+\stopmakeup
+
+%\setupbackgrounds[page][background=,]
+
+%Backside of titlepage
+\startstandardmakeup[page=no,doublesided=no]
+\stopstandardmakeup
+

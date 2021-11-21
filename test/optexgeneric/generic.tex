@@ -1,0 +1,84 @@
+% Preamble
+\useOpTeX
+
+%\load[package1,package2]
+
+\enlang
+%\svlang
+%\svquotes % ?
+%\quoteschars<clqq><crqq><clq><crq>
+%\altquotes
+%\activequotes
+
+\fontfam[libertinus]
+\typosize[10/14]
+
+\xspaceskip=\fontdimen2\font plus \fontdimen3\font minus \fontdimen4\font
+\advance\xspaceskip by \fontdimen7\font
+
+\sdef{_pgs:sixnine}{(6,9)in}
+
+\hsize=4in
+\vsize=434pt
+\margins/2 sixnine (0.667,,1,)in
+
+\headline = {\hfil test \hfil}  
+\headlinedist = 14pt % from baseline of \headline to top of page body 
+
+\footline = {\_hss\_rmfixed \_folio \_hss}
+\footlinedist = 48pt % from last line in pagebody to baseline of footlin
+
+\def \myOrange {\setcmykcolor{0 0.5 1 0}} 
+
+\picdir={img}
+
+\picw=50pt
+%\inspic picname.png
+
+\parskip=0pt plus 0pt minus 0pt
+\parindent=1em
+
+\hyphenation{gal-axy}
+
+% Content
+
+\tit Document title
+\chap[label1] Chapter title
+\nonum\chap[label2] No number chapter title
+\sec[label3] Section title
+\notoc\sec[label4] No ToC section title
+\secc Subsection[label5] title
+
+As we can see in chapter~\ref[label1] on page \pgref[label1], this is a reference.
+
+%These are \'single quotes' and \"double quotes".
+
+
+
+\begitems
+* First idea
+* Second idea in subitems: 
+	\begitems \style i 
+	* First sub-idea 
+	* Second sub-idea 
+	* Last sub-idea 
+	\enditems 
+* Finito 
+\enditems
+
+%\style o % small bullet 
+%\style O % big bullet (default) 
+%\style - % hyphen char 
+%\style n % numbered items 1., 2., 3., ... 
+%\style N % numbered items 1), 2), 3), ... 
+%\style i % numbered items (i), (ii), (iii), ... 
+%\style I % numbered items I, II, III, IV, ... 
+%\style a % items of type a), b), c), ... 
+%\style A % items of type A), B), C), ... 
+%\style x % small rectangle 
+%\style X % big rectangle 
+
+\the\parskip
+
+\input mylorem
+\bye

@@ -1,0 +1,40 @@
+\setupbodyfont[11pt, etbb]
+\definebodyfontenvironment[10pt][interlinespace=12pt]
+\definebodyfontenvironment[11pt][interlinespace=18pt]
+\definebodyfontenvironment[12pt][interlinespace=16pt]
+
+\definepapersize[6x9][width=6in,height=9in]
+\setuppapersize[6x9][6x9]
+
+\setuplayout % Rosarivo's 9ths
+   [location={middle, left, doublesided},
+    grid=no,
+	marking=on,
+   %top to bottom
+	topspace=\dimexpr(\paperheight/9)\relax,
+	header=0pt,
+	headerdistance=0pt,
+	height=\dimexpr((\paperheight/9)*6)\relax,
+	footer=0pt,
+	footerdistance=0pt,
+   %left to right
+	backspace=\dimexpr(\paperwidth/9)\relax,
+	leftmargin=0pt,
+	leftmargindistance=0pt,
+	width=\dimexpr(\paperwidth/9)*6\relax,
+	rightmargin=0pt,
+	rightmargindistance=0pt,]
+        
+\setuppagenumbering [location=bottom, alternative=doublesided]
+
+\showframe
+\showgrid
+
+\starttext
+\input knuth\par
+%\framed[height=2.7\lineheight,before=,after=,frameoffset=0pt,offset=0pt,frame=on]{\tfc Test}
+\vbox height 3\lineheight
+
+\input knuth
+\input knuth
+\stoptext

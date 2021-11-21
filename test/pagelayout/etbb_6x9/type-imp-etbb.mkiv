@@ -1,0 +1,32 @@
+\definefontfeature
+  [etbb-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [etbb-smallcaps]
+  [etbb-normal]
+  [smcp=yes,c2sc=yes]
+
+\definefontfeature
+  [swash]
+  [swsh=yes]
+
+\starttypescriptcollection[etbb]
+
+\starttypescript [serif] [etbb]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:ETbb-Regular]     [features=etbb-normal]
+       \definefontsynonym [SerifItalic]     [file:ETbb-Italic]      [features=etbb-normal]
+       \definefontsynonym [SerifBold]       [file:ETbb-Bold]        [features=etbb-normal]
+       \definefontsynonym [SerifSlanted]    [file:ETbb-Italic]      [features=etbb-normal]
+       \definefontsynonym [SerifBoldItalic] [file:ETbb-BoldItalic]  [features=etbb-normal]
+       \definefontsynonym [SerifBoldSlanted][file:ETbb-BoldItalic]  [features=etbb-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                 [features=etbb-smallcaps]
+\stoptypescript
+
+\starttypescript[etbb]
+     \definetypeface [etbb] [rm] [serif] [etbb] [default]
+\stoptypescript
+
+\stoptypescriptcollection

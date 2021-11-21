@@ -1,0 +1,18 @@
+%% OpTeX <1.04 Aug.2021> - REF file
+\Xrefversion{6}
+\_Xpage{1}{1}
+\_Xpage{2}{2}
+\_Xlabel{label1}{1}
+\_Xtoc{1}{chap}{1}{}Chapter title
+\_Xpage{3}{3}
+\_Xlabel{label2}{ }
+\_Xtoc{1}{chap}{ }{}No number chapter title
+\_Xlabel{label3}{1.1}
+\_Xtoc{2}{sec}{1.1}{}Section title
+\_Xlabel{label4}{1.2}
+\_Xtoc{3}{secc}{1.2.1}{}Subsection[label5] title
+\_Xpage{4}{4}
+\_Xpage{5}{5}
+\_Xpage{6}{6}
+\_Xpage{7}{7}
+\_Xpage{8}{8}
