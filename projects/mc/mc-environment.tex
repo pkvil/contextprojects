@@ -1,0 +1,174 @@
+\startenvironment worm-environment
+
+%%
+%% F O N T S
+%%
+
+\setupbodyfont[cochineal,11pt]
+
+%\definebodyfontenvironment[11pt][interlinespace=14.4pt]
+
+%\definefont[chaptertitlefont][SerifCaps at 18pt][14.4pt]
+
+%\definefontfeature[swash][swsh=yes]
+%\definefontfeature[liningfigures][onum=no,lnum=yes]
+
+%\definesymbol[asterism][\getglyph{file:Cochineal-Italic}{\char"2042}] % by unicode index
+%\definesymbol[leaf][\fontchar{leaf}] % by name
+
+%\definecharacterkerning[chaptertitlekerning][1.7]
+
+%%
+%% P A P E R   A N D   P A G E   S I Z E
+%%
+
+\definepapersize[mypage][width=6in, height=9in]
+
+\setuppapersize[mypage][mypage] % [typeset page] on [paper size].
+%\setuparranging[2SIDE]
+
+%%
+%% P A G E   L A Y O U T
+%%
+
+\setuplayout[
+    location={middle,left,doublesided},
+    grid=yes,
+    marking=on,
+   % TOP TO BOTTOM    
+    topspace=\dimexpr(1in-2\lineheight)\relax,
+    header=1\lineheight,
+    headerdistance=1\lineheight,
+    height=\dimexpr(6in+7\lineheight)\relax,
+    footerdistance=2\lineheight,
+    footer=3\lineheight,
+   % INNER TO OUTER
+    backspace=\dimexpr(\paperwidth/9)\relax,
+    leftmargin=0pt,
+    leftmargindistance=0pt,
+    width=4in,
+    rightmargin=1in,
+    rightmargindistance=6pt,
+]
+
+\setuppagenumbering[alternative=doublesided, location=,]
+
+%%
+%% P A R A G R A P H
+%%
+
+\setupindenting[yes,small,next] % indent paragraphs
+
+\setupspacing[packed] % French spacing
+
+\setupitaliccorrection[text]
+
+\setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
+
+%%
+%% S E C T I O N I N G
+%%
+
+% FRONTMATTER
+
+\startsectionblockenvironment[frontpart]
+  \setcounter[userpage][1]
+  \setupuserpagenumber [numberconversion=romannumerals]
+\stopsectionblockenvironment
+
+% BODYMATTER
+
+\startsectionblockenvironment[bodypart]
+    \setcounter[userpage][1]
+\stopsectionblockenvironment
+
+% PART
+
+\definepagebreak[emptypagebreak][yes,header,footer,right]
+
+\setuplabeltext[part=Arc~]
+
+%\setuphead[part][%
+%    page=emptypagebreak,
+%    before={\blank[force,2*big]},
+%    placehead=yes, 
+%    bodypartlabel=part, 
+%    alternative=middle, 
+%    header=empty]
+
+% CHAPTER
+
+
+
+%\setuphead[chapter][%
+%    page=emptypagebreak,
+%    number=no,
+%    before={\framed[frame=off,width=\textwidth,lines=5,frameoffset=0pt,location=height]\bgroup},
+%    after={\egroup\blank[4*line]},
+%    header=empty,
+%    alternative=middle,
+%    style={\tfb \feature[+][liningfigures]},
+%    textcommand={\kerncharacters[0.14]},
+%    deeptextcommand=\WORD,
+%    ]
+
+% INTERLUDE
+
+%\definehead[interlude][chapter]
+
+%\setuphead[interlude][]
+
+%\setuplabeltext[chapter={\getmarking[part]~},interlude=Interlude,part=foo]
+
+%\setuphead[interlude][%
+    
+%]
+
+%%
+%% H E A D E R S   &   F O O T E R S
+%%
+
+\setupheadertexts[]
+%\setupheadertexts[\hfill{\sc \getmarking[part]~\getmarking[chapternumber]}\hfill] %recto outer
+%\setupheadertexts[\hfill{\sc \getmarking[chapter]}\hfill] %recto outer
+%                 [] % recto inner
+%                 [] % verso inner
+%                 [\hfill{\sc Worm}\hfill] % verso outer
+
+%\setupfootertexts[\hfill \pagenumber \hfill] % recto outer
+%                 [] % recto inner
+%                 [] % verso inner
+%                 [\hfill \pagenumber \hfill] % verso outer
+
+%%
+%% S P E C I A L   P A G E S
+%%
+
+% TABLE OF CONTENTS
+
+%\setupcombinedlist[content][list={part,chapter}, alternative=c,]
+
+% STANDARD MAKEUP
+
+
+%
+% V I S U A L   D E B U G G I N G
+%
+
+%showframe
+
+%\showgrid
+
+%%
+%% M I S C
+%%
+
+\setupexternalfigures[directory=images]
+
+%
+% F I X   I S S U E S
+%
+
+%\adaptlayout[6][lines=+1]
+
+\stopenvironment
