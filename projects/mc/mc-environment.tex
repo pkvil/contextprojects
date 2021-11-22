@@ -1,10 +1,10 @@
-\startenvironment worm-environment
+\startenvironment mc-environment
 
 %%
 %% F O N T S
 %%
 
-\setupbodyfont[cochineal,11pt]
+\setupbodyfont[etbb,11pt]
 
 %\definebodyfontenvironment[11pt][interlinespace=14.4pt]
 
@@ -57,13 +57,14 @@
 %% P A R A G R A P H
 %%
 
-\setupindenting[yes,small,next] % indent paragraphs
+\setupindenting[yes,small,first] % indent paragraphs
 
 \setupspacing[packed] % French spacing
 
 \setupitaliccorrection[text]
 
 \setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
+
 
 %%
 %% S E C T I O N I N G
@@ -170,5 +171,14 @@
 %
 
 %\adaptlayout[6][lines=+1]
+
+\definestartstop [negindent] [
+  before={%
+    \startnarrower[left]%
+    \setupindenting[-\leftskip,yes,first]%
+    \setuphead[subject][indentnext=yes]%
+  },
+  after=\stopnarrower,
+]
 
 \stopenvironment
