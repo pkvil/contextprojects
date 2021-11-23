@@ -53,17 +53,21 @@
 
 \setuppagenumbering[alternative=doublesided, location=,]
 
+\setupmargindata[location=outer,style={\switchtobodyfont[small]\it}]
+
 %%
 %% P A R A G R A P H
 %%
 
-\setupindenting[yes,small,first] % indent paragraphs
+\setupindenting[yes,small] % indent paragraphs
 
 \setupspacing[packed] % French spacing
 
 \setupitaliccorrection[text]
 
 \setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
+
+
 
 
 %%
@@ -136,10 +140,10 @@
 %                 [] % verso inner
 %                 [\hfill{\sc Worm}\hfill] % verso outer
 
-%\setupfootertexts[\hfill \pagenumber \hfill] % recto outer
-%                 [] % recto inner
-%                 [] % verso inner
-%                 [\hfill \pagenumber \hfill] % verso outer
+\setupfootertexts[\hfill \pagenumber \hfill] % recto outer
+                 [] % recto inner
+                 [] % verso inner
+                 [\hfill \pagenumber \hfill] % verso outer
 
 %%
 %% S P E C I A L   P A G E S
@@ -151,6 +155,11 @@
 
 % STANDARD MAKEUP
 
+%%
+%% M Y   O W N   C O M M A N D S
+ %%
+
+\define[1]\say{\dontleavehmode\hbox to 4.9em{\sc #1\hfil}}
 
 %
 % V I S U A L   D E B U G G I N G
@@ -172,13 +181,5 @@
 
 %\adaptlayout[6][lines=+1]
 
-\definestartstop [negindent] [
-  before={%
-    \startnarrower[left]%
-    \setupindenting[-\leftskip,yes,first]%
-    \setuphead[subject][indentnext=yes]%
-  },
-  after=\stopnarrower,
-]
 
 \stopenvironment
