@@ -7,29 +7,30 @@
 
 \definefont [bigfont] [Serif*default at 36pt]
 
+
 \startmakeup[titlepage]
 
     {\bigfont \subtractfeature[ligature]%
         \kerncharacters[0.1] PHAEDRUS%
     }
 
-    \blank[15pt]
+    \blank[17pt]
 
     {\itb by} 
 
     \blank[15pt]
 
 %    {\itc{\addfeature[swash]J}ane {\addfeature[swash]A}usten}
-     {\scd \kerncharacters[0.05] Plato}
+     {\definedfont[Serif at 24pt] \kerncharacters[0.1] PLATO}
 
 
-    \blank[38pt]
+
 
 %    \dontleavehmode \externalfigure[titlepagefloralornament][width=1.7in]
 
-    \blank[38pt]
+    \blank[300pt]
 
-    {\tfa \addfeature[swash]Q}uat Books, Eslöv \par 2021
+{\tf Rådjur Books,\crlf Eslöv 2021}
 \stopmakeup
 
 %\setupbackgrounds[page][background=,]
