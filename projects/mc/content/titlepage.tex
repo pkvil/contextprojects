@@ -7,30 +7,35 @@
 
 \definefont [bigfont] [Serif*default at 36pt]
 
+%\showframe
 
 \startmakeup[titlepage]
 
-    {\bigfont \subtractfeature[ligature]%
-        \kerncharacters[0.1] PHAEDRUS%
-    }
+    \blank[-8pt]
 
-    \blank[17pt]
+    {\definedfont[Serif at 20pt] \kerncharacters[0.1] PLATO}
 
-    {\itb by} 
+    \blank[40pt]
+
+    {\definedfont[Serif at 30pt] \kerncharacters[0.1] PHAEDRUS}
 
     \blank[15pt]
 
-%    {\itc{\addfeature[swash]J}ane {\addfeature[swash]A}usten}
-     {\definedfont[Serif at 24pt] \kerncharacters[0.1] PLATO}
+    {\definedfont[Serif at 20pt] \&}
 
+    \blank[15pt]
 
+    {\definedfont[Serif at 30pt] \kerncharacters[0.1] SYMPOSIUM}
 
+    \blank[61pt]
 
-%    \dontleavehmode \externalfigure[titlepagefloralornament][width=1.7in]
+    \dontleavehmode \externalfigure[floralheart][width=1.6in]
 
-    \blank[300pt]
+    {\sc \kerncharacters[0.1] MEGAN EDITION}
 
-{\tf Rådjur Books,\crlf Eslöv 2021}
+    \blank[61pt]
+
+{\tfx Rådjur Books,\crlf Eslöv 2021}
 \stopmakeup
 
 %\setupbackgrounds[page][background=,]
