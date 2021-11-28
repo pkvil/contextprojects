@@ -1,5 +1,6 @@
 \definemakeup[titlepage]
     [top=,
+     bottom=,
      doublesided=no,
      headerstate=empty,
      footerstate=empty,
@@ -13,29 +14,57 @@
 
     \blank[-8pt]
 
-    {\definedfont[Serif at 20pt] \kerncharacters[0.1] PLATO}
+    {\definedfont[Serif at 18pt] P\kern 3.5pt
+                                 L\kern 3.5pt 
+                                 A\kern 3pt
+                                 T\kern 3pt
+                                 O\kern 1pt
+                                 \symbol[rightquote]\kern 1pt
+                                 S}
+    \blank[30pt]
 
-    \blank[40pt]
+%    \dontleavehmode\rotate[rotation=90,frame=off]{{\definedfont[file:fonts/imfellflowers2/FeFlow2.otf at 12pt]A}}
 
-    {\definedfont[Serif at 30pt] \kerncharacters[0.1] PHAEDRUS}
+%    \blank[20pt]
 
-    \blank[15pt]
 
-    {\definedfont[Serif at 20pt] \&}
 
-    \blank[15pt]
+    {\definedfont[Serif at 26pt] \kerncharacters[0.2] PHAEDRUS}
 
-    {\definedfont[Serif at 30pt] \kerncharacters[0.1] SYMPOSIUM}
+    \blank[8pt]
 
-    \blank[61pt]
+    {\definedfont[Italic at 20pt] and}
 
-    \dontleavehmode \externalfigure[floralheart][width=1.6in]
+    \blank[10pt]
 
-    {\sc \kerncharacters[0.1] MEGAN EDITION}
+ %   {\definedfont[Serif at 26pt] \kerncharacters[0.2] SYMPOSIUM}
+    {\definedfont[Serif at 26pt] S\kern 5.5pt%
+                                 Y\kern 5.5pt%
+                                 M\kern 6pt%
+                                 P\kern 4pt%
+                                 O\kern 4.5pt%
+                                 S\kern 6pt%
+                                 I\kern 5.5pt%
+                                 U\kern 5pt%
+                                 M}
 
-    \blank[61pt]
+    \blank[26pt]
 
-{\tfx Rådjur Books,\crlf Eslöv 2021}
+    {\ita Translated by}
+
+    \blank[3pt]
+
+    {\ita William Hackett}
+
+    \blank[49pt]
+
+    \dontleavehmode \externalfigure[floralheart][width=1.65in]
+
+    {\sc \kerncharacters[0.1] MEGAN\symbol[rightquote]S EDITION}
+
+    \blank[49pt]
+
+{\sc \kerncharacters[0.1]Quat Books, Eslöv 2021}
 \stopmakeup
 
 %\setupbackgrounds[page][background=,]
