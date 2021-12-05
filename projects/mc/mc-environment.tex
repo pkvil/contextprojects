@@ -4,8 +4,9 @@
 %% F O N T S
 %%
 
-\setupbodyfont[etbb,11pt]
+\setupbodyfont[etbb,10pt]
 
+\definebodyfontenvironment[10pt][interlinespace=14pt]
 \definebodyfontenvironment[11pt][interlinespace=15pt]
 
 %\definefont[chaptertitlefont][SerifCaps at 18pt][14.4pt]
@@ -105,17 +106,18 @@
 
 
 
-%\setuphead[chapter][%
-%    page=emptypagebreak,
-%    number=no,
-%    before={\framed[frame=off,width=\textwidth,lines=5,frameoffset=0pt,location=height]\bgroup},
-%    after={\egroup\blank[4*line]},
-%    header=empty,
-%    alternative=middle,
-%    style={\tfb \feature[+][liningfigures]},
-%    textcommand={\kerncharacters[0.14]},
-%    deeptextcommand=\WORD,
-%    ]
+\setuphead[chapter][%
+    page=emptypagebreak,
+    number=no,
+    before={\framed[frame=off,width=\textwidth,lines=1,frameoffset=0pt,location=height]\bgroup},
+    after={\egroup\blank[1*line]},
+    header=empty,
+    alternative=middle,
+    style={\tfb \feature[+][liningfigures]},
+    textcommand={\kerncharacters[0.14]},
+    deeptextcommand=\WORD,
+    indentnext=auto,
+    ]
 
 % INTERLUDE
 
@@ -161,6 +163,18 @@
 
 \define\saysocrates{\dontleavehmode\hbox to 5em{\sc Socrates \hfil}}
 \define\sayphaedrus{\dontleavehmode\hbox to 5em{\sc Phaedrus \hfil}}
+
+\defineframedtext[poemframed]
+                 [width=\textwidth,
+                  autowidth=force,
+                  align=flushleft,
+                  before=,
+                  after=,
+                  frame=off]
+
+\definelines[poem]
+            [before={\startpoemframed[middle]},
+             after=\stoppoemframed]
 
 %%
 %% C O L O R S 
