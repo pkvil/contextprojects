@@ -10,9 +10,12 @@
     \stopfrontmatter
 
     \startbodymatter
-        \input rawcontent/phaedrussay
-%        \input rawcontent/rawsymposium
+%        \input content/phaedrus
+        \input rawcontent/rawsymposium
+        \startchapter[title=Endnotes]
+            \placenotes[endnote]
+        \stopchapter
     \stopbodymatter
-\dorecurse{2}{\page[yes]\null}
+%\dorecurse{2}{\page[yes]\null}
 \stoptext
 

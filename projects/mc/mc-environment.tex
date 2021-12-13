@@ -25,7 +25,7 @@
 
 \definepapersize[mypage][width=6in, height=9in]
 
-\setuppapersize[mypage][A4] % [typeset page] on [paper size].
+\setuppapersize[mypage][mypage] % [typeset page] on [paper size].
 %\setuparranging[2SIDE]
 
 %%
@@ -182,13 +182,17 @@
 
 \definecolor[myred][c=0, m=.96, y=1, k=.22]
 
+
+% ENDNOTES
+\setupnote[endnote][bodyfont=]
+
 %
 % V I S U A L   D E B U G G I N G
 %
 
 %\showframe
 
-%\showgrid
+\showgrid
 
 %%
 %% M I S C
