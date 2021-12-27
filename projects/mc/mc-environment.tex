@@ -25,7 +25,7 @@
 
 \definepapersize[mypage][width=6in, height=9in]
 
-\setuppapersize[mypage][mypage] % [typeset page] on [paper size].
+\setuppapersize[mypage][A4] % [typeset page] on [paper size].
 %\setuparranging[2SIDE]
 
 %%
@@ -104,13 +104,13 @@
 
 % CHAPTER
 
-
+%\showgrid
 
 \setuphead[chapter][%
     page=emptypagebreak,
     number=no,
     before={\framed[frame=off,width=\textwidth,lines=1,frameoffset=0pt,location=height]\bgroup},
-    after={\egroup\blank[1*line]},
+    after={\egroup\blank[3*line]},
     header=empty,
     alternative=middle,
     style={\tfb \feature[+][liningfigures]},
@@ -164,6 +164,9 @@
 \define\saysocrates{\dontleavehmode\hbox to 5em{\sc Socrates \hfil}}
 \define\sayphaedrus{\dontleavehmode\hbox to 5em{\sc Phaedrus \hfil}}
 
+\define\sayapollodorus{{\sc Apollodoros\quad}}
+\define\sayfriend{{\sc Friend\quad}}
+
 \defineframedtext[poemframed]
                  [width=\textwidth,
                   autowidth=force,
@@ -192,7 +195,9 @@
 
 %\showframe
 
-\showgrid
+%\showgrid
+
+%\enabletrackers[visualizers.justification]
 
 %%
 %% M I S C
