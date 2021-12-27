@@ -5,8 +5,6 @@
     \startfrontmatter
         \input content/titlepage
         \input content/tableofcontents
- %       \completecontent
- %       \page[empty]
     \stopfrontmatter
 
     \startbodymatter
@@ -15,7 +13,9 @@
         \startchapter[title=Endnotes,reference=endnotes]
             \placenotes[endnote]
         \stopchapter
+        \startmakeup[titlepage]\stopmakeup % removes folio
     \stopbodymatter
+
 %\dorecurse{2}{\page[yes]\null}
 \stoptext
 
