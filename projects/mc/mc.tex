@@ -4,15 +4,15 @@
 
     \startfrontmatter
         \input content/titlepage
- %       \input content/tableofcontents
-        \completecontent
-        \page[empty]
+        \input content/tableofcontents
+ %       \completecontent
+ %       \page[empty]
     \stopfrontmatter
 
     \startbodymatter
         \input content/phaedrus
         \input content/symposium
-        \startchapter[title=Endnotes]
+        \startchapter[title=Endnotes,reference=endnotes]
             \placenotes[endnote]
         \stopchapter
     \stopbodymatter

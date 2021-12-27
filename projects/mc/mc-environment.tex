@@ -78,8 +78,12 @@
 % FRONTMATTER
 
 \startsectionblockenvironment[frontpart]
-  \setcounter[userpage][1]
-  \setupuserpagenumber [numberconversion=romannumerals]
+ % \setcounter[userpage][1]
+ % \setupuserpagenumber [numberconversion=romannumerals]
+\setupfootertexts[] % recto outer
+                 [] % recto inner
+                 [] % verso inner
+                 [] % verso outer
 \stopsectionblockenvironment
 
 % BODYMATTER
@@ -94,17 +98,15 @@
 
 \setuplabeltext[part=Arc~]
 
-%\setuphead[part][%
-%    page=emptypagebreak,
+\setuphead[part][%
+    page=emptypagebreak,
 %    before={\blank[force,2*big]},
 %    placehead=yes, 
 %    bodypartlabel=part, 
 %    alternative=middle, 
-%    header=empty]
+    header=empty]
 
 % CHAPTER
-
-%\showgrid
 
 \setuphead[chapter][%
     page=emptypagebreak,
@@ -209,7 +211,8 @@
 % F I X   I S S U E S
 %
 
-%\adaptlayout[6][lines=+1]
+%\adaptlayout[8][lines=-1] \adaptlayout[9][lines=-1]
+
 
 
 \stopenvironment
