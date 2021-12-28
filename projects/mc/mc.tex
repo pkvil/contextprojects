@@ -1,7 +1,6 @@
 \environment mc-environment
 
 \starttext
-
     \startfrontmatter
         \input content/titlepage
         \input content/tableofcontents
@@ -10,12 +9,7 @@
     \startbodymatter
         \input content/phaedrus
         \input content/symposium
-        \startchapter[title=Endnotes,reference=endnotes]
-            \placenotes[endnote]
-        \stopchapter
-        \startmakeup[titlepage]\stopmakeup % removes folio
+        \input content/endnotes
     \stopbodymatter
-
-%\dorecurse{2}{\page[yes]\null}
 \stoptext
 
