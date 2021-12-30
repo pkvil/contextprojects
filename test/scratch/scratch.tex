@@ -1,0 +1,30 @@
+\setuplayout[grid=yes]
+\setupbodyfont[12pt]
+\frenchspacing
+
+%\showgrid
+%\showboxes
+
+\define[1]\dropcapZ{%
+    \definefont[dcfont][Serif at 54pt]
+    \definefont[quotefont][Serif at 22pt]
+    \noindent\kern -0.2em
+    \llap{\raise 4.15ex \hbox{\quotefont “}\kern -0.1em}%
+    {\dcfont Z}
+    \blank[-3*line]
+    \dimen1=2.5em
+    \dimen2=3em
+    \dimen3=3em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.1]\sc #1}%            
+}
+
+\starttext
+
+\dropcapZ{orem ipsum dolor} sit amet”. \input zapf
+
+\stoptext

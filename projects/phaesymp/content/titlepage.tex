@@ -1,0 +1,67 @@
+\definemakeup[titlepage]
+    [top=,
+     bottom=,
+     doublesided=no,
+     headerstate=empty,
+     footerstate=empty,
+     align=middle,]
+
+\definefont [bigfont] [Serif*default at 36pt]
+
+%\showframe
+
+\startmakeup[titlepage]
+
+    \blank[-8pt]
+
+    {\definedfont[Serif at 18pt] P\kern 3.5pt
+                                 L\kern 3.5pt 
+                                 A\kern 3pt
+                                 T\kern 3pt
+                                 O\kern 1pt
+                                 \symbol[rightquote]\kern 1pt
+                                 S}
+    \blank[30pt]
+
+%    \dontleavehmode\rotate[rotation=90,frame=off]{{\definedfont[file:fonts/imfellflowers2/FeFlow2.otf at 12pt]A}}
+
+%    \blank[20pt]
+
+
+
+    {\definedfont[Serif at 26pt] \kerncharacters[0.2] PHAEDRUS}
+
+    \blank[8pt]
+
+    {\definedfont[Italic at 20pt] and}
+
+    \blank[10pt]
+
+ %   {\definedfont[Serif at 26pt] \kerncharacters[0.2] SYMPOSIUM}
+    {\definedfont[Serif at 26pt] S\kern 5.5pt%
+                                 Y\kern 5.5pt%
+                                 M\kern 6pt%
+                                 P\kern 4pt%
+                                 O\kern 4.5pt%
+                                 S\kern 6pt%
+                                 I\kern 5.5pt%
+                                 U\kern 5pt%
+                                 M}
+
+    \blank[92pt]
+
+    \dontleavehmode \externalfigure[floralheart2][width=2in]
+
+    {\sc \kerncharacters[0.1] MEGAN\symbol[rightquote]S EDITION}
+
+    \blank[92pt]
+
+{\sc \kerncharacters[0.1]Quat Books, Eslöv 2021}
+\stopmakeup
+
+%\setupbackgrounds[page][background=,]
+
+%Backside of titlepage
+\startstandardmakeup[page=no,doublesided=no]
+\stopstandardmakeup
+

@@ -1,0 +1,202 @@
+\startenvironment phaesymp-environment
+
+%%
+%% F O N T S
+%%
+
+\setupbodyfont[etbb,10pt]
+
+\definebodyfontenvironment[10pt][interlinespace=14pt]
+
+%%
+%% P A P E R   A N D   P A G E   S I Z E
+%%
+
+\setuppapersize[A5][A5]
+
+
+%%
+%% P A G E   L A Y O U T
+%%
+
+\setuplayout[
+    grid=yes,
+   % TOP TO BOTTOM    
+    topspace=\dimexpr(0.75in-2\lineheight)\relax,
+    header=1\lineheight,
+    headerdistance=1\lineheight,
+    height=\dimexpr(6in+6\lineheight)\relax,
+    footerdistance=1\lineheight,
+    footer=3\lineheight,
+   % INNER TO OUTER
+    backspace=\dimexpr(\paperwidth/9)\relax,
+    leftmargin=0pt,
+    leftmargindistance=0pt,
+    width=4in,
+    rightmargin=64pt,
+    rightmargindistance=16pt,
+]
+
+\setuppagenumbering[alternative=doublesided, location=,]
+
+\setupmargindata[location=outer,style={\it}]
+
+%%
+%% P A R A G R A P H
+%%
+
+\setupindenting[yes,small] % indent paragraphs
+
+\setupspacing[packed] % French spacing
+
+\setupitaliccorrection[text]
+
+\setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
+
+
+
+
+%%
+%% S E C T I O N I N G
+%%
+
+% FRONTMATTER
+
+\startsectionblockenvironment[frontpart]
+ % \setcounter[userpage][1]
+ % \setupuserpagenumber [numberconversion=romannumerals]
+\setupfootertexts[] % recto outer
+                 [] % recto inner
+                 [] % verso inner
+                 [] % verso outer
+\stopsectionblockenvironment
+
+% BODYMATTER
+
+\startsectionblockenvironment[bodypart]
+    \setcounter[userpage][1]
+\stopsectionblockenvironment
+
+% PART
+
+\definepagebreak[emptypagebreak][yes,header,footer,right]
+
+\setuplabeltext[part=Arc~]
+
+\setuphead[part][%
+    page=emptypagebreak,
+%    before={\blank[force,2*big]},
+%    placehead=yes, 
+%    bodypartlabel=part, 
+%    alternative=middle, 
+    header=empty]
+
+% CHAPTER
+
+\setuphead[chapter][%
+    page=emptypagebreak,
+    number=no,
+    before={\framed[frame=off,width=\textwidth,lines=1,frameoffset=0pt,location=height]\bgroup},
+    after={\egroup\blank[3*line]},
+    header=empty,
+    alternative=middle,
+    style={\tfb \feature[+][liningfigures]},
+    textcommand={\kerncharacters[0.14]},
+    deeptextcommand=\WORD,
+    indentnext=auto,
+    ]
+
+% INTERLUDE
+
+%\definehead[interlude][chapter]
+
+%\setuphead[interlude][]
+
+%\setuplabeltext[chapter={\getmarking[part]~},interlude=Interlude,part=foo]
+
+%\setuphead[interlude][%
+    
+%]
+
+%%
+%% H E A D E R S   &   F O O T E R S
+%%
+
+\setupheadertexts[]
+
+\setupfootertexts[\hfill \pagenumber \hfill] % recto outer
+                 [] % recto inner
+                 [] % verso inner
+                 [\hfill \pagenumber \hfill] % verso outer
+
+
+%%
+%% M Y   O W N   C O M M A N D S
+%%
+
+% For dialogue, aligning names.
+\define\saysocrates{\dontleavehmode\hbox to 5em{\sc Socrates \hfil}}
+\define\sayphaedrus{\dontleavehmode\hbox to 5em{\sc Phaedrus \hfil}}
+
+\define\sayapollodorus{{\sc Apollodoros\quad}}
+\define\sayfriend{{\sc Friend\quad}}
+
+% \startpoem ... \stoppoem centers a poem wrt the longest line.
+% Keeps newlines.
+
+\defineframedtext[poemframed]
+                 [width=\textwidth,
+                  autowidth=force,
+                  align=flushleft,
+                  before=,
+                  after=,
+                  frame=off]
+
+\definelines[poem]
+            [before={\startpoemframed[middle]},
+             after=\stoppoemframed]
+
+% ENDNOTES
+\setupnote[endnote][bodyfont=]
+
+%
+% V I S U A L   D E B U G G I N G
+%
+
+%\showframe
+
+%\showgrid
+
+%\enabletrackers[visualizers.justification]
+
+%%
+%% M I S C
+%%
+
+\setupexternalfigures[directory=images]
+
+%
+% F I X   I S S U E S
+%
+
+% Phaedrus
+\adaptlayout[10][lines=-1]  \adaptlayout[11][lines=-1]
+\adaptlayout[48][lines=+1]  \adaptlayout[49][lines=+1]
+\adaptlayout[60][lines=+1]  \adaptlayout[61][lines=+1]
+\adaptlayout[68][lines=+1]  \adaptlayout[69][lines=+1]
+% Symposium
+\adaptlayout[82][lines=+1]  \adaptlayout[83][lines=+1]
+\adaptlayout[84][lines=+1]  \adaptlayout[85][lines=+1]
+\adaptlayout[86][lines=+1]  \adaptlayout[87][lines=+1]
+\adaptlayout[92][lines=+1]  \adaptlayout[93][lines=+1]
+\adaptlayout[98][lines=+1]  \adaptlayout[99][lines=+1]
+\adaptlayout[116][lines=+1] \adaptlayout[117][lines=+1]
+\adaptlayout[136][lines=-1] \adaptlayout[137][lines=-1]
+\adaptlayout[138][lines=+1] \adaptlayout[139][lines=+1]
+\adaptlayout[144][lines=+1] \adaptlayout[145][lines=+1]
+%Endnotes
+\adaptlayout[151][lines=+1]
+\adaptlayout[154][lines=+1] \adaptlayout[155][lines=+1]
+
+
+\stopenvironment
