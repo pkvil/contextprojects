@@ -1,0 +1,200 @@
+\setuplayout[grid=yes,topspace=4pc,header=0pc,headerdistance=0pc,height=50pc,
+             backspace=4pc,width=22pc]
+\setupcolumns[n=2,distance=2pc,align=right,balance=yes]
+
+\setupbodyfont[domitian,10pt]
+\definebodyfontenvironment[10pt][interlinespace=12pt]
+\frenchspacing
+%\setupalign[nothyphenated]
+
+\setuppagenumbering[location=,]
+
+%\showgrid
+%\showboxes
+
+\define[1]\elevatedcapO{%
+    \definefont[ecfont][file:QTCaslanOpen.otf at 56pt]
+    \noindent\kern 1.5em {\ecfont O}
+    \noindent\kern -0.6em {\kerncharacters[0.17]\sc #1}%            
+}
+
+\define[1]\dropcapT{%
+    \definefont[dcfont][Serif at 42pt]
+    \definefont[quotefont][Serif at 20pt]
+    \noindent\kern -0.65em
+%    \llap{\raise 4.15ex \hbox{\quotefont “}\kern -0.1em}%
+    {\dcfont T}
+    \blank[-3*line]
+    \dimen1=2.1em
+    \dimen2=1.95em
+    \dimen3=1.95em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.15]\sc #1}%            
+}
+
+\define[1]\dropcapN{%
+    \definefont[dcfont][Serif at 42pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern -0.08em
+    \llap{\raise 2.4ex \hbox{\quotefont «}\kern 0em}%
+    {\dcfont N}
+    \blank[-3*line]
+    \dimen1=3.6em
+    \dimen2=3.6em
+    \dimen3=3.6em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.15]\sc #1}%            
+}
+
+\define[1]\dropcapA{%
+    \definefont[dcfont][Serif at 42pt]
+    \definefont[quotefont][Serif at 12pt]
+    \noindent\kern -0.08em
+    \llap{\raise 4.65ex \hbox{\quotefont “}\kern -0.62em}%
+    {\dcfont A}
+    \blank[-3*line]
+    \dimen1=2.5em
+    \dimen2=3em
+    \dimen3=3.5em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.1]\sc #1}%            
+}
+
+\define[1]\dropcapV{%
+    \definefont[dcfont][Serif at 42pt]
+    \definefont[quotefont][Serif at 14pt]
+    \noindent\kern -1.5em
+%    \llap{\raise 4.15ex \hbox{\quotefont }\kern -0.1em}%
+    {\dcfont V}
+    \blank[-3*line]
+    \dimen1=1.75em
+    \dimen2=1.25em
+    \dimen3=0.75em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.17]\sc #1}%            
+}
+
+\define[1]\dropcapS{%
+    \definefont[dcfont][Serif at 42pt]
+    \definefont[quotefont][Serif at 14pt]
+    \noindent\kern -0.12em
+%    \llap{\raise 4.15ex \hbox{\quotefont }\kern -0.1em}%
+    {\dcfont S}
+    \blank[-3*line]
+    \dimen1=2.15em
+    \dimen2=2.5em
+    \dimen3=2.5em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.17]\sc #1}%            
+}
+
+\define[1]\dropcapL{%
+    \definefont[dcfont][Serif at 42pt]
+    \definefont[quotefont][Serif at 14pt]
+    \noindent\kern -0.27em
+%    \llap{\raise 4.15ex \hbox{\quotefont }\kern -0.1em}%
+    {\dcfont L}
+    \blank[-3*line]
+    \dimen1=1.6em
+    \dimen2=2.6em
+    \dimen3=2.6em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.17]\sc #1}%            
+}
+
+\starttext
+\startcolumns
+
+\elevatedcapO{sculetur}
+me osculo oris sui; quia
+meliora sunt ubera tua
+vino, ¶ fragrantia unguentis
+optimis. Oleum effusum
+nomen tuum; ideo adolescentulae
+dilexerunt te.
+
+\dropcapT{rahe me,} post te
+curremus in odorem
+unguentorum tuorum.
+Introduxit me rex in
+cellaria sua; exsultabimus et
+laetabimur in te, memores
+uberum tuorum super
+vinum. Recti diligunt te.
+
+\dropcapN{igra sum,} sed
+formosa, filiae
+Ierusalem, sicut
+pelles Salomonis. Nolite me
+considerare quod fusca sim,
+quia decoloravit me sol. Filii
+matris meae pugnaverunt
+contra me....»
+
+\dropcapA{diuro vos,} filiae
+Ierusalem, per
+capreas cervosque
+camporum, ne suscitetis,
+neque evigliare faciatis
+dilectam, quoadusque
+ipsa velit.”
+
+\dropcapV{ox dilecti mei;}
+ecce iste venit, saliens
+in montibus, transiliens
+colles. ¶ Similis est dilectus
+meus capreae, hinnuloque
+cervorum. En ipse stat post
+parietem nostrum, respiciens
+per fenestras, prospiciens
+per cancellos. En
+dilectus meus loquitur mihi.
+
+\dropcapS{urge,} propera, amica
+mea, columba mea,
+formosa mea, et veni.
+¶ Iam enim hiems transiit;
+imber abiit, et recessit.
+¶ Flores apparuerunt in
+terra nostra....
+
+\dropcapL{avi pedes meos,}
+quomodo inquinabo
+illos? ¶ Dilectus meus
+misit manum suam per
+foramen, et venter meus
+intremuit ad tactum eius.
+¶ Surrexit ut aperirem
+dilecto meo; manus meae
+stillaverunt myrrham, et
+digiti mei pleni myrrha
+probatissima. Pessulum
+ostii mei....
+
+\stopcolumns
+\stoptext
+

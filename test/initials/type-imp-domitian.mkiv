@@ -1,0 +1,33 @@
+\definefontfeature
+  [domitian-normal]
+  [default]
+  [mode=node,ccmp=yes,calt=yes,
+   liga=yes,dlig=no,hlig=yes,
+   kern=yes,mark=yes,mkmk=yes,
+   onum=yes,pnum=yes,salt=yes,
+   script=latn]
+
+\definefontfeature
+  [domitian-smallcaps]
+  [domitian-normal]
+  [smcp=yes,c2sc=yes]
+
+\starttypescriptcollection[domitian]
+
+    \starttypescript [serif] [domitian] [name]
+        \setups[font:fallback:serif]
+        \definefontsynonym [Serif]           [file:Domitian-Roman]      [features=domitian-normal]
+        \definefontsynonym [SerifBold]       [file:Domitian-Bold]       [features=domitian-normal]
+        \definefontsynonym [SerifItalic]     [file:Domitian-Italic]     [features=domitian-normal]
+        \definefontsynonym [SerifSlanted]    [file:Domitian-Italic]     [features=domitian-normal]
+        \definefontsynonym [SerifBoldItalic] [file:Domitian-BoldItalic] [features=domitian-normal]
+        \definefontsynonym [SerifBoldSlanted][file:Domitian-BoldItalic] [features=domitian-normal]
+        \definefontsynonym [SerifCaps]       [Serif]       	            [features=domitian-smallcaps]
+    \stoptypescript
+
+    \starttypescript[domitian]
+        \definetypeface [domitian] [rm] [serif] [domitian] [default]
+    \stoptypescript
+
+\stoptypescriptcollection
+
