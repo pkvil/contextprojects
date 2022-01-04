@@ -34,10 +34,10 @@
     footer=2\lineheight,
    % INNER TO OUTER
 %    backspace=\dimexpr(\paperwidth/8)\relax,% twosided
-    backspace=19.5mm,% onesided
+    backspace=19mm,% onesided
     leftmargin=0pt,
     leftmargindistance=0pt,
-    width=110mm,
+    width=111mm,
     rightmargin=64pt,
     rightmargindistance=16pt,
 ]
@@ -120,16 +120,60 @@
 \setupexternalfigures[directory=images]
 
 %%
+%% D R O P   C A P S
+%%
+
+% M
+
+\define[1]\dropcapM{%
+    \definefont[capfont][Serif at 49pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern -0.08em
+%    \llap{\raise 2.4ex \hbox{\quotefont «}\kern 0em}%
+    {\capfont M}
+    \vskip-4\baselineskip
+    \dimen1=3.85em
+    \dimen2=3.85em
+    \dimen3=3.85em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.17]\sc #1}%            
+}
+
+\define[1]\dropcapD{%
+    \definefont[capfont][Serif at 49pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern -0.16em
+%    \llap{\raise 2.4ex \hbox{\quotefont «}\kern 0em}%
+    {\capfont D}
+    \vskip-4\baselineskip
+    \dimen1=2.7em
+    \dimen2=3.2em
+    \dimen3=3.2em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.16]\sc #1}%            
+}
+
+%%
 %% V I S U A L   D E B U G G I N G
 %%
 
 %\showframe
-
+%\showboxes
 %\showgrid
 
 %\enabletrackers[visualizers.justification]
 
-%\adaptlayout[2][lines=+1] \adaptlayout[3][lines=+1]
+\adaptlayout[7][lines=+1]
+\adaptlayout[11][lines=+1]
+\adaptlayout[14][lines=+1]
 
 
 \stopenvironment
