@@ -1,4 +1,4 @@
-\startenvironment nio-environment
+\startenvironment assignments-environment
 
 \mainlanguage[sv]
 
@@ -7,42 +7,39 @@
 %%
 
 \setupbodyfont[cochineal,11pt]
-\definebodyfontenvironment[10pt][interlinespace=13.5pt]
+\definebodyfontenvironment[11pt][interlinespace=14pt]
 \definesymbol[leaf][\fontchar{leaf}] % by name
 
 %%
 %% P A P E R   A N D   P A G E   S I Z E
 %%
 
-\definepapersize[mypage][width=6in, height=9in]
-\setuppapersize[A5][A5]
+\setuppapersize[A4][A4]
 
 %%
 %% P A G E   L A Y O U T
 %%
 
 \setuplayout[
-    location={middle,left,doublesided},
     grid=yes,
-    marking=on,
    % TOP TO BOTTOM    
-    topspace=\dimexpr(17.5mm-(2\baselineskip)),
+    topspace=1in,
     header=1\baselineskip,
     headerdistance=1\baselineskip,
-    height=41\baselineskip,
+    height=9in,
     footerdistance=1\baselineskip,
     footer=2\lineheight,
    % INNER TO OUTER
 %    backspace=\dimexpr(\paperwidth/8)\relax,% twosided
-    backspace=19mm,% onesided
-    leftmargin=0pt,
-    leftmargindistance=0pt,
-    width=111mm,
+    backspace=1.5in,% onesided
+    leftmargin=64pt,
+    leftmargindistance=7pt,
+    width=120mm,
     rightmargin=64pt,
     rightmargindistance=16pt,
 ]
 
-\setuppagenumbering[alternative=doublesided, location=,]
+\setuppagenumbering[location=,]
 
 %%
 %% S E C T I O N I N G
@@ -55,8 +52,8 @@
 \startsectionblockenvironment[frontpart]
  % \setcounter[userpage][1]
  % \setupuserpagenumber [numberconversion=romannumerals]
-\setupheadertexts[] % recto outer
-                 [] % recto inner
+\setupheadertexts[\hss{\getmarking[chapter}\hss] % recto outer
+                 [test] % recto inner
                  [] % verso inner
                  [] % verso outer
 \setupfootertexts[] % recto outer
@@ -73,24 +70,14 @@
 
 % CHAPTER
 
-\setuphead[chapter][%
-    page=emptypagebreak,
-    number=no,
-    before={\startlinecorrection\blank[2*line,force]},
-    after={\stoplinecorrection\blank[3*line,force]},
-    header=empty,
-    alternative=middle,
-    style={\tfc \feature[+][liningfigures]},
-    textcommand={\kerncharacters[0.17]},
-    deeptextcommand=\WORD,
-]
+
 
 %%
 %% P A R A G R A P H
 %%
 
-\setupindenting[no,small] % indent paragraphs
-\setupwhitespace[line] % whitespace between paragraphs
+\setupindenting[yes,medium] % indent paragraphs
+%\setupwhitespace[no] % whitespace between paragraphs
 
 \setupspacing[packed] % French spacing
 
@@ -106,7 +93,7 @@
 \setupheadertexts[\hfill{\kerncharacters[0.17]\sc \getmarking[chapter]}\hfill] %recto outer
                  [] % recto inner
                  [] % verso inner
-                 [\hfill{\kerncharacters[0.17]\sc Nio noveller i elfte timmen}\hfill] % verso outer
+                 [\hfill{\kerncharacters[0.17]\sc \getmarking[chapter]}\hfill] % verso outer
 
 \setupfootertexts[\hfill \pagenumber \hfill] % recto outer
                  [] % recto inner

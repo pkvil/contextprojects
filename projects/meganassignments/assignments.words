@@ -1,0 +1,44 @@
+return {
+ ["categories"]={
+  ["document"]={
+   ["languages"]={
+    ["sv"]={
+     ["list"]={
+      ["one"]=1,
+      ["three"]=1,
+      ["two"]=1,
+     },
+     ["number"]={
+      ["clean"]="function: 0x5612e04b6ba0",
+      ["clearhyphenation"]="function: 0x5612e04b6ec0",
+      ["clearpatterns"]="function: 0x5612e04b6d90",
+      ["current"]="function: 0x5612e04b6990",
+      ["gethjcode"]="function: 0x5612e04b7100",
+      ["has_language"]="function: 0x5612e04b6b30",
+      ["hyphenate"]="function: 0x5612e04b6a90",
+      ["hyphenation"]="function: 0x5612e04b7f60",
+      ["hyphenationmin"]="function: 0x5612e04b78a0",
+      ["id"]="function: 0x5612e04b6ff0",
+      ["new"]="function: 0x5612e04b69c0",
+      ["patterns"]="function: 0x5612e04b7a30",
+      ["postexhyphenchar"]="function: 0x5612e04b7260",
+      ["posthyphenchar"]="function: 0x5612e04b7580",
+      ["preexhyphenchar"]="function: 0x5612e04b7710",
+      ["prehyphenchar"]="function: 0x5612e04b73f0",
+      ["sethjcode"]="function: 0x5612e04b7bf0",
+      ["setwordhandler"]="function: 0x5612e04b7d90",
+     },
+     ["parent"]="",
+     ["patterns"]="sv",
+     ["tag"]="sv",
+     ["total"]=3,
+     ["unique"]=3,
+    },
+   },
+   ["total"]=3,
+  },
+ },
+ ["threshold"]=1,
+ ["total"]=3,
+ ["version"]=0x1p+0,
+}
