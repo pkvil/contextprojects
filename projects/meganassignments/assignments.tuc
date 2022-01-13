@@ -45,45 +45,44 @@ utilitydata.job.positions.collected={
   {
    ["i"]=1,
    ["p"]=1,
-   ["pi"]=1081500,
-   ["y"]=48149092,
+   ["y"]=47261667,
   },
-  46772836,
-  45396580,
-  35304036,
-  25211492,
-  13283940,
+  46344163,
+  45426659,
+  {
+   ["i"]=1,
+   ["p"]=1,
+   ["pi"]=1081500,
+   ["y"]=36251619,
+  },
+  27076579,
+  16066531,
   {
    ["i"]=1,
    ["p"]=2,
    ["pi"]=1081500,
-   ["y"]=40809060,
+   ["y"]=43591651,
   },
-  28881508,
-  18788964,
+  32581603,
+  23406563,
+  12396515,
   {
    ["i"]=1,
    ["p"]=3,
    ["pi"]=1081500,
-   ["y"]=42644068,
+   ["y"]=43591651,
   },
-  32551524,
-  20623972,
+  32581603,
+  23406563,
+  12396515,
   {
    ["i"]=1,
    ["p"]=4,
    ["pi"]=1081500,
-   ["y"]=44479076,
+   ["y"]=43591651,
   },
-  32551524,
-  22458980,
-  {
-   ["i"]=1,
-   ["p"]=5,
-   ["pi"]=1081500,
-   ["y"]=42644068,
-  },
-  32551524,
+  32581603,
+  23406563,
  },
  ["page"]={
   {
@@ -99,16 +98,16 @@ utilitydata.job.positions.collected={
    {
     ["d"]=256900,
     ["h"]=660604,
-    ["hs"]=22376157,
-    ["x"]=7104430,
+    ["hs"]=24240837,
+    ["x"]=7458719,
    },
   },
   ["x_y_w_h"]={
    {
-    ["h"]=38039060,
-    ["w"]=22376157,
-    ["x"]=7104430,
-    ["y"]=10770636,
+    ["h"]=40463551,
+    ["w"]=24240837,
+    ["x"]=7458719,
+    ["y"]=7458720,
    },
   },
   ["y_w_h_d"]={},
@@ -121,7 +120,6 @@ utilitydata.job.positions.collected={
   2,
   3,
   4,
-  5,
  },
  ["user"]={},
 }
@@ -157,7 +155,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=1,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -166,7 +164,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=3,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -175,7 +173,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=4,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -184,7 +182,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=5,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -193,7 +191,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=6,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -202,7 +200,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=7,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -211,7 +209,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=8,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -220,7 +218,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=9,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -229,7 +227,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=10,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -238,7 +236,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=11,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -247,7 +245,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=12,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -256,7 +254,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=13,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -265,7 +263,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=14,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -274,7 +272,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=15,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -283,7 +281,7 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["language"]="sv",
+  ["language"]="en",
   ["numbers"]=16,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
@@ -332,10 +330,10 @@ utilitydata.structures.counters.collected={
   { 0, 0 },
  },
  ["realpage"]={
-  { 5 },
+  { 4 },
  },
  ["subpage"]={
-  { 5 },
+  { 4 },
  },
  ["table"]={
   { 0, 0 },
@@ -344,7 +342,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 5 },
+  { 4 },
  },
 }
 
@@ -360,12 +358,12 @@ utilitydata.structures.lists.collected={
    ["internal"]=1,
    ["realpage"]=1,
    ["section"]=1,
-   ["x"]=29480587,
-   ["y"]=42644068,
+   ["x"]=31699556,
+   ["y"]=43591651,
   },
   ["titledata"]={
    ["label"]="chapter",
-   ["title"]="Anatomy and other things",
+   ["title"]="Anatomy\\hairspace \\ and\\hairspace \\ Other\\hairspace \\ Things",
   },
  },
  {
@@ -376,8 +374,8 @@ utilitydata.structures.lists.collected={
    ["internal"]=2,
    ["realpage"]=1,
    ["section"]=2,
-   ["x"]=29480587,
-   ["y"]=37139044,
+   ["x"]=31699556,
+   ["y"]=38086627,
   },
   ["titledata"]={
    ["label"]="section",
@@ -392,8 +390,8 @@ utilitydata.structures.lists.collected={
    ["internal"]=3,
    ["realpage"]=1,
    ["section"]=3,
-   ["x"]=29480587,
-   ["y"]=27046500,
+   ["x"]=31699556,
+   ["y"]=28911587,
   },
   ["titledata"]={
    ["label"]="section",
@@ -408,8 +406,8 @@ utilitydata.structures.lists.collected={
    ["internal"]=4,
    ["realpage"]=1,
    ["section"]=4,
-   ["x"]=29480587,
-   ["y"]=15118948,
+   ["x"]=31699556,
+   ["y"]=17901539,
   },
   ["titledata"]={
    ["label"]="section",
@@ -424,8 +422,8 @@ utilitydata.structures.lists.collected={
    ["internal"]=5,
    ["realpage"]=2,
    ["section"]=5,
-   ["x"]=29480587,
-   ["y"]=42644068,
+   ["x"]=31699556,
+   ["y"]=45426659,
   },
   ["titledata"]={
    ["label"]="section",
@@ -440,8 +438,8 @@ utilitydata.structures.lists.collected={
    ["internal"]=6,
    ["realpage"]=2,
    ["section"]=6,
-   ["x"]=29480587,
-   ["y"]=30716516,
+   ["x"]=31699556,
+   ["y"]=34416611,
   },
   ["titledata"]={
    ["label"]="section",
@@ -456,8 +454,8 @@ utilitydata.structures.lists.collected={
    ["internal"]=7,
    ["realpage"]=2,
    ["section"]=7,
-   ["x"]=29480587,
-   ["y"]=20623972,
+   ["x"]=31699556,
+   ["y"]=25241571,
   },
   ["titledata"]={
    ["label"]="section",
@@ -470,10 +468,10 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=8,
-   ["realpage"]=3,
+   ["realpage"]=2,
    ["section"]=8,
-   ["x"]=29480587,
-   ["y"]=44479076,
+   ["x"]=31699556,
+   ["y"]=14231523,
   },
   ["titledata"]={
    ["label"]="section",
@@ -488,8 +486,8 @@ utilitydata.structures.lists.collected={
    ["internal"]=9,
    ["realpage"]=3,
    ["section"]=9,
-   ["x"]=29480587,
-   ["y"]=34386532,
+   ["x"]=31699556,
+   ["y"]=45426659,
   },
   ["titledata"]={
    ["label"]="section",
@@ -504,8 +502,8 @@ utilitydata.structures.lists.collected={
    ["internal"]=10,
    ["realpage"]=3,
    ["section"]=10,
-   ["x"]=29480587,
-   ["y"]=22458980,
+   ["x"]=31699556,
+   ["y"]=34416611,
   },
   ["titledata"]={
    ["label"]="section",
@@ -518,10 +516,10 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=11,
-   ["realpage"]=4,
+   ["realpage"]=3,
    ["section"]=11,
-   ["x"]=29480587,
-   ["y"]=46314084,
+   ["x"]=31699556,
+   ["y"]=25241571,
   },
   ["titledata"]={
    ["label"]="section",
@@ -534,10 +532,10 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=12,
-   ["realpage"]=4,
+   ["realpage"]=3,
    ["section"]=12,
-   ["x"]=29480587,
-   ["y"]=34386532,
+   ["x"]=31699556,
+   ["y"]=14231523,
   },
   ["titledata"]={
    ["label"]="section",
@@ -552,8 +550,8 @@ utilitydata.structures.lists.collected={
    ["internal"]=13,
    ["realpage"]=4,
    ["section"]=13,
-   ["x"]=29480587,
-   ["y"]=24293988,
+   ["x"]=31699556,
+   ["y"]=45426659,
   },
   ["titledata"]={
    ["label"]="section",
@@ -566,10 +564,10 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=14,
-   ["realpage"]=5,
+   ["realpage"]=4,
    ["section"]=14,
-   ["x"]=29480587,
-   ["y"]=44479076,
+   ["x"]=31699556,
+   ["y"]=34416611,
   },
   ["titledata"]={
    ["label"]="section",
@@ -582,10 +580,10 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=15,
-   ["realpage"]=5,
+   ["realpage"]=4,
    ["section"]=15,
-   ["x"]=29480587,
-   ["y"]=34386532,
+   ["x"]=31699556,
+   ["y"]=25241571,
   },
   ["titledata"]={
    ["label"]="section",
@@ -622,13 +620,6 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=4,
-  ["numberdata"]=34,
-  ["prefixdata"]=35,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=5,
   ["numberdata"]=34,
   ["prefixdata"]=35,
   ["state"]="start",
@@ -731,7 +722,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=1,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -748,7 +739,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=3,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -757,7 +748,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=4,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -766,7 +757,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=5,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -775,7 +766,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=6,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -784,7 +775,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=7,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -793,7 +784,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=8,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -802,7 +793,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=9,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -811,7 +802,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=10,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -820,7 +811,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=11,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -829,7 +820,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=12,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -838,7 +829,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=13,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -847,7 +838,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=14,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -856,7 +847,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=15,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
@@ -865,7 +856,7 @@ utilitydata.job.packed={
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["language"]="sv",
+   ["language"]="en",
    ["numbers"]=16,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
