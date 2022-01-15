@@ -1,0 +1,187 @@
+\startenvironment bodyfonts-environment
+
+\mainlanguage[en]
+
+%%
+%% F O N T S
+%%
+
+\setupbodyfont[cochineal,10pt]
+\definebodyfontenvironment[10pt][interlinespace=12pt]
+\definesymbol[leaf][\fontchar{leaf}] % by name
+
+%%
+%% P A P E R   A N D   P A G E   S I Z E
+%%
+
+\setuppapersize[A4][A4]
+
+%%
+%% P A G E   L A Y O U T
+%%
+
+\setuplayout[
+    grid=no,
+   % TOP TO BOTTOM    
+    topspace=40mm,
+    header=0\baselineskip,
+    headerdistance=0\baselineskip,
+    height=217mm,
+    footerdistance=0\baselineskip,
+    footer=0\lineheight,
+   % INNER TO OUTER
+%    backspace=\dimexpr(\paperwidth/8)\relax,% twosided
+    backspace=40mm,% onesided
+    leftmargin=64pt,
+    leftmargindistance=9pt,
+    width=130mm,
+    rightmargin=64pt,
+    rightmargindistance=16pt,
+]
+
+\setuppagenumbering[location=,]
+
+%%
+%% S E C T I O N I N G
+%%
+
+\definepagebreak[emptypagebreak][yes,header,footer,right]
+
+% FRONTMATTER
+
+\startsectionblockenvironment[frontpart]
+ % \setcounter[userpage][1]
+ % \setupuserpagenumber [numberconversion=romannumerals]
+\setupheadertexts[\hss{\getmarking[chapter}\hss] % recto outer
+                 [test] % recto inner
+                 [] % verso inner
+                 [] % verso outer
+\setupfootertexts[] % recto outer
+                 [] % recto inner
+                 [] % verso inner
+                 [] % verso outer
+\stopsectionblockenvironment
+
+% BODYMATTER
+
+\startsectionblockenvironment[bodypart]
+    \setcounter[userpage][1]
+\stopsectionblockenvironment
+
+% CHAPTER
+
+\setuphead[chapter]
+    [page=yes,
+    header=empty,
+    style=\tfa,
+    number=no,
+    alternative=middle,
+    numberstyle={\feature[+][lnum]},
+    textcommand={\kerncharacters[0.16]\spaceskip 0.35em},
+    deeptextcommand=\WORD,
+    after={\blank[2*line]},
+    before=,
+]
+
+\setuphead[section]
+    [alternative=normal,
+     number=no,
+     continue=no,
+     style=\it,
+     before={\blank[line]},
+     after={\blank[line]},
+]
+     
+
+%%
+%% P A R A G R A P H
+%%
+
+\setupindenting[yes,medium] % indent paragraphs
+%\setupwhitespace[no] % whitespace between paragraphs
+
+\setupspacing[packed] % French spacing
+
+\setupitaliccorrection[text]
+
+\setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
+
+%%
+%% H E A D E R S   &   F O O T E R S
+%%
+
+
+\setupheadertexts[\hfill{\kerncharacters[0.17]\sc \getmarking[chapter]}\hfill] %recto outer
+                 [] % recto inner
+                 [] % verso inner
+                 [\hfill{\kerncharacters[0.17]\sc \getmarking[chapter]}\hfill] % verso outer
+
+\setupfootertexts[\hfill \pagenumber \hfill] % recto outer
+                 [] % recto inner
+                 [] % verso inner
+                 [\hfill \pagenumber \hfill] % verso outer
+
+%%
+%% M I S C
+%%
+
+\setupexternalfigures[directory=images]
+
+%%
+%% D R O P   C A P S
+%%
+
+% M
+
+\define[1]\dropcapM{%
+    \definefont[capfont][Serif at 49pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern -0.08em
+    {\capfont M}
+    \vskip-4\baselineskip
+    \dimen1=3.85em
+    \dimen2=3.85em
+    \dimen3=3.85em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.14]\sc #1}%            
+}
+
+% D
+
+\define[1]\dropcapD{%
+    \definefont[capfont][Serif at 49pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern -0.16em
+    {\capfont D}
+    \vskip-4\baselineskip
+    \dimen1=2.73em
+    \dimen2=3.2em
+    \dimen3=2.9em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\kerncharacters[0.14]\sc #1}%            
+}
+
+%%
+%% V I S U A L   D E B U G G I N G
+%%
+
+%\showframe
+%\showboxes
+%\showgrid
+
+%\enabletrackers[visualizers.justification]
+
+%\adaptlayout[7][lines=+1]
+%\adaptlayout[11][lines=+1]
+%\adaptlayout[14][lines=+1]
+
+
+\stopenvironment
