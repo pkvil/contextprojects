@@ -7,34 +7,39 @@
 %%
 
 \setupbodyfont[cochineal,10pt]
-\definebodyfontenvironment[10pt][interlinespace=12pt]
+\definebodyfontenvironment[10pt][interlinespace=13.5pt]
+\definebodyfontenvironment[11pt][interlinespace=14pt]
 \definesymbol[leaf][\fontchar{leaf}] % by name
 
 %%
 %% P A P E R   A N D   P A G E   S I Z E
 %%
 
-\setuppapersize[A4][A4]
+\setuppapersize[A5][A5]
 
 %%
 %% P A G E   L A Y O U T
 %%
 
+%Centering the measure in a onesided document
+\newdimen\textmeasure \textmeasure=100mm
+\newdimen\gutter \gutter=\dimexpr(\paperwidth-\textmeasure)/2
+
 \setuplayout[
     grid=no,
    % TOP TO BOTTOM    
-    topspace=40mm,
+    topspace=20mm,
     header=0\baselineskip,
     headerdistance=0\baselineskip,
-    height=217mm,
+    height=161mm,
     footerdistance=0\baselineskip,
     footer=0\lineheight,
    % INNER TO OUTER
 %    backspace=\dimexpr(\paperwidth/8)\relax,% twosided
-    backspace=40mm,% onesided
-    leftmargin=64pt,
+    backspace=\gutter,% onesided
+    leftmargin=40pt,
     leftmargindistance=9pt,
-    width=130mm,
+    width=\textmeasure,
     rightmargin=64pt,
     rightmargindistance=16pt,
 ]
@@ -73,7 +78,7 @@
 \setuphead[chapter]
     [page=yes,
     header=empty,
-    style=\tfa,
+    style=\tf,
     number=no,
     alternative=middle,
     numberstyle={\feature[+][lnum]},
@@ -97,7 +102,7 @@
 %% P A R A G R A P H
 %%
 
-\setupindenting[yes,medium] % indent paragraphs
+\setupindenting[yes,small] % indent paragraphs
 %\setupwhitespace[no] % whitespace between paragraphs
 
 \setupspacing[packed] % French spacing

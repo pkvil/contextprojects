@@ -1,0 +1,39 @@
+\definefontfeature
+  [erewhon-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [erewhon-smallcaps]
+  [erewhon-normal]
+  [smcp=yes,c2sc=no]
+
+\definefontfeature[smcp][smcp=yes]
+\definefontfeature[c2sc][c2sc=yes]
+\definefontfeature[lnum][lnum=yes]
+\definefontfeature[onum][onum=yes]
+\definefontfeature[pnum][pnum=yes]
+\definefontfeature[tnum][tnum=yes]
+\definefontfeature[sinf][sinf=yes]
+\definefontfeature[ss02][ss02=yes]
+\definefontfeature[sups][sups=yes]
+\definefontfeature[swsh][swsh=yes]
+
+\starttypescriptcollection[erewhon]
+
+\starttypescript [serif] [erewhon]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:Erewhon-Regular]          [features=erewhon-normal]
+       \definefontsynonym [SerifItalic]     [file:Erewhon-Italic]           [features=erewhon-normal]
+       \definefontsynonym [SerifBold]       [file:Erewhon-Bold]             [features=erewhon-normal]
+       \definefontsynonym [SerifSlanted]    [file:Erewhon-RegularSlanted]   [features=erewhon-normal]
+       \definefontsynonym [SerifBoldItalic] [file:Erewhon-BoldItalic]       [features=erewhon-normal]
+       \definefontsynonym [SerifBoldSlanted][file:Erewhon-BoldSlanted]      [features=erewhon-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                         [features=erewhon-smallcaps]
+\stoptypescript
+
+\starttypescript[erewhon]
+     \definetypeface [erewhon] [rm] [serif] [erewhon] [default]
+\stoptypescript
+
+\stoptypescriptcollection

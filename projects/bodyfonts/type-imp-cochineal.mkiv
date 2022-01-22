@@ -12,14 +12,19 @@
   [lnum]
   [onum=no,lnum=yes]
 
+\definefontfeature
+  [swash]
+  [swsh=yes]
+
 \starttypescriptcollection[cochineal]
 
 \starttypescript [serif] [cochineal]
        \setups[font:fallback:serif]
-       \definefontsynonym [Serif]       [file:Cochineal-Roman]  [features=cochineal-normal]
-       \definefontsynonym [SerifItalic] [file:Cochineal-Italic] [features=cochineal-normal]
-       \definefontsynonym [SerifBold]   [file:Cochineal-Roman]  [features=cochineal-normal]
-       \definefontsynonym [SerifCaps]   [Serif]                 [features=cochineal-smallcaps]
+       \definefontsynonym [Serif]           [file:Cochineal-Roman]      [features=cochineal-normal]
+       \definefontsynonym [SerifItalic]     [file:Cochineal-Italic]     [features=cochineal-normal]
+       \definefontsynonym [SerifBold]       [file:Cochineal-Bold]       [features=cochineal-normal]
+       \definefontsynonym [SerifBoldItalic] [file:Cochineal-BoldItalic] [features=cochineal-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                     [features=cochineal-smallcaps]
 \stoptypescript
 
 \starttypescript[cochineal]

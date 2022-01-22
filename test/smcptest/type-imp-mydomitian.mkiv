@@ -1,0 +1,27 @@
+\definefontfeature
+  [mydomitian-normal]
+  [default]
+  [default]
+
+\definefontfeature
+  [mydomitian-smallcaps]
+  [mydomitian-normal]
+  [smcp=yes,c2sc=no]
+
+\starttypescriptcollection[mydomitian]
+
+\starttypescript [serif] [mydomitian]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]       [file:myydomitian-Roman.otf] [features=mydomitian-normal]
+       \definefontsynonym [SerifItalic] [file:myydomitian-Italic.otf]  [features=mydomitian-normal]
+       \definefontsynonym [SerifBold]   [file:myydomitian-Roman.otf] [features=mydomitian-normal]
+       \definefontsynonym [SerifCaps]   [Serif]                   [features=mydomitian-smallcaps]
+\stoptypescript
+
+\starttypescript[mydomitian]
+     \definetypeface [mydomitian] [rm] [serif] [mydomitian] [default]
+%     \definetypeface [mydomitian] [tt] [mono]  [dejavu]     [default] [rscale=0.8] % 
+%     \definetypeface [mydomitian] [mm] [math]  [bonum]      [default] [rscale=0.8] % 
+\stoptypescript
+
+\stoptypescriptcollection

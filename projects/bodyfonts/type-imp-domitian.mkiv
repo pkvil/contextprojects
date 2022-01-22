@@ -1,0 +1,32 @@
+\definefontfeature
+  [domitian-normal]
+  [default]
+  [onum=yes,pnum=yes]
+
+\definefontfeature
+  [domitian-smallcaps]
+  [domitian-normal]
+  [smcp=yes,script=latn]
+
+\definefontfeature
+  [lnum]
+  [onum=no,lnum=yes]
+
+\starttypescriptcollection[domitian]
+
+\starttypescript [serif] [domitian]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:Domitian-Roman]       [features=domitian-normal]
+       \definefontsynonym [SerifItalic]     [file:Domitian-Italic]      [features=domitian-normal]
+       \definefontsynonym [SerifBold]       [file:Domitian-Bold]        [features=domitian-normal]
+       \definefontsynonym [SerifBoldItalic] [file:Domitian-BoldItalic]  [features=domitian-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                     [features=domitian-smallcaps]
+\stoptypescript
+
+\starttypescript[domitian]
+     \definetypeface [domitian] [rm] [serif] [domitian] [default] [rscale=1]
+%     \definetypeface [domitian] [tt] [mono]  [dejavu]     [default] [rscale=0.8] % 
+%     \definetypeface [domitian] [mm] [math]  [bonum]      [default] [rscale=0.8] % 
+\stoptypescript
+
+\stoptypescriptcollection
