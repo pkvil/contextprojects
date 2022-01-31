@@ -2,13 +2,17 @@
 
 \mainlanguage[en]
 
+%\lesshyphens
+%\setuplanguage[en][lefthyphenmin=5,righthyphenmin=5]
+\setupalign[nothyphenated]
+
 %%
 %% F O N T S
 %%
 
-\setupbodyfont[coelacanth,12pt]
-\definebodyfontenvironment[12pt][interlinespace=16pt]
-\definebodyfontenvironment[13pt][interlinespace=15pt]
+\setupbodyfont[ajenson,12pt]
+\definebodyfontenvironment[12pt][interlinespace=15.5pt]
+\definebodyfontenvironment[13pt][interlinespace=16pt]
 \definesymbol[dotmath][\fontchar{dotmath}] % by name
 
 \definefontsynonym[Nymphette][file:Nymphette.ttf]
@@ -142,6 +146,7 @@ before={\blank[line]},after={\blank[line]},]
   [
     leftmargin=0em,
     width=1em,
+    before=,
   ]
 
 %%

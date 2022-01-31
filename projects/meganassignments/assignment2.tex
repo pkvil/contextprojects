@@ -11,12 +11,13 @@
 {\sc A muscle} is tissue consisting of bundles of parallel fibers wrapped in fascia.
 \blank[line]
 
-\definesymbol[dotmath][\dotmath]
-
+\start
+\setupalign[nothyphenated]
 \startcolumns[n=2,separator=rule,balance=no]
 \startalignment[middle]
 Properties
 \stopalignment
+\startalignment[right]
 \startitemize[symbol=mybullet1]
 \item Excitable – Reacts to stimuli via innervation
 \item Contractible – May contract upon stimulation in 3 different ways
@@ -28,6 +29,7 @@ Properties
 \item Extensible - May be stretched
 \item Elastic - Able to recoil
 \stopitemize
+\stopalignment
 \column
 \startalignment[middle]
 Roles
@@ -41,8 +43,39 @@ Roles
 \stopitemize
 \stopcolumns
 
+\stop
+
+\start
+\setupalign[nothyphenated]
+
+\noindent Properties:
+
+\startalignment[right]
+\startitemize[symbol=mybullet1]
+\item Excitable – Reacts to stimuli via innervation
+\item Contractible – May contract upon stimulation in 3 different ways
+    \startitemize[symbol=mybullet2]
+    \item Concentrically – Muscle shortens
+    \item Eccentrically – Muscle lengthens
+    \item Isometrically  – Muscle neither shortens or lengthens during contraction
+    \stopitemize
+\item Extensible - May be stretched
+\item Elastic - Able to recoil
+\stopitemize
+\stopalignment
+
+\noindent Roles:
+
+\startitemize[symbol=mybullet1]
+\item Agonist – Prime mover muscle
+\item Synergist – Supporting muscle to help the agonist in movement
+\item Antagonist – Opposes prime mover to slow and monitor movement
+\item Protects joint
+\item Stabilizer – A muscle that pairs with an opposing muscle to keep a bone in place
+\stopitemize
 
 
+\stop
 
 
 
