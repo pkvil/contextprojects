@@ -21,7 +21,7 @@
 
 \starttypescriptcollection[ajenson]
 
-\starttypescript [serif] [ajenson]
+\starttypescript [serif] [ajensonlight]
        \setups[font:fallback:serif]
        \definefontsynonym [Serif]           [file:AJensonPro-Lt]          [features=ajenson-normal]
        \definefontsynonym [SerifItalic]     [file:AJensonPro-LtIt]           [features=ajenson-normal]
@@ -32,8 +32,19 @@
        \definefontsynonym [SerifCaps]       [Serif]                         [features=ajenson-smallcaps]
 \stoptypescript
 
+\starttypescript [serif] [ajensonregular]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:AJensonPro-Regular]          [features=ajenson-normal]
+       \definefontsynonym [SerifItalic]     [file:AJensonPro-It]           [features=ajenson-normal]
+       \definefontsynonym [SerifBold]       [file:AJensonPro-Bold]             [features=ajenson-normal]
+       \definefontsynonym [SerifSlanted]    [file:AJensonPro-It]          [features=ajenson-normal]
+       \definefontsynonym [SerifBoldItalic] [file:AJensonPro-BoldIt]       [features=ajenson-normal]
+       \definefontsynonym [SerifBoldSlanted][file:AJensonPro-BoldIt]      [features=ajenson-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                         [features=ajenson-smallcaps]
+\stoptypescript
+
 \starttypescript[ajenson]
-     \definetypeface [ajenson] [rm] [serif] [ajenson] [default]
+     \definetypeface [ajenson] [rm] [serif] [ajensonlight] [default]
 \stoptypescript
 
 \stoptypescriptcollection
