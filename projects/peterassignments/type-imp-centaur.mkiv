@@ -1,0 +1,39 @@
+\definefontfeature
+  [centaur-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [centaur-smallcaps]
+  [centaur-normal]
+  [smcp=yes,c2sc=no]
+
+\definefontfeature[smcp][smcp=yes]
+\definefontfeature[c2sc][c2sc=yes]
+\definefontfeature[lnum][lnum=yes]
+\definefontfeature[onum][onum=yes]
+\definefontfeature[pnum][pnum=yes]
+\definefontfeature[tnum][tnum=yes]
+\definefontfeature[sinf][sinf=yes]
+\definefontfeature[ss02][ss02=yes]
+\definefontfeature[sups][sups=yes]
+\definefontfeature[swsh][swsh=yes]
+
+\starttypescriptcollection[centaur]
+
+\starttypescript [serif] [centaur]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:CentaurMT]          [features=centaur-normal]
+       \definefontsynonym [SerifItalic]     [file:CentaurMT-Italic]           [features=centaur-normal]
+       \definefontsynonym [SerifBold]       [file:CentaurMT-Bold]             [features=centaur-normal]
+       \definefontsynonym [SerifSlanted]    [file:CentaurMT-ItalicOsF]   [features=centaur-normal]
+       \definefontsynonym [SerifBoldItalic] [file:CentaurMT-BoldItalic]       [features=centaur-normal]
+       \definefontsynonym [SerifBoldSlanted][file:CentaurMT-BoldItalic]      [features=centaur-normal]
+       \definefontsynonym [SerifCaps]       [file:CentaurMT-SC]                         [features=centaur-normal]
+\stoptypescript
+
+\starttypescript[centaur]
+     \definetypeface [centaur] [rm] [serif] [centaur] [default]
+\stoptypescript
+
+\stoptypescriptcollection

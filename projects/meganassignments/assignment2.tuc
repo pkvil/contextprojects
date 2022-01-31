@@ -2,7 +2,7 @@ local utilitydata = { }
 
 utilitydata.comment={
  ["escape"]="[===[ ... ]===]",
- ["file"]="assignments",
+ ["file"]="assignment2",
  ["format"]="cont-en",
  ["stamp"]="2022.01.15 17:32",
  ["version"]=0x1.547ae147ae148p+0,
@@ -19,7 +19,7 @@ if not utilitydata.job.variables then utilitydata.job.variables = { } end
 
 utilitydata.job.variables.collected={
  ["macros"]={},
- ["randomseed"]=0x1.8486970f3ec88p-4,
+ ["randomseed"]=0x1.ae14ed89ff1acp-3,
  ["sectionblockorder"]={},
 }
 
@@ -41,11 +41,184 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.positions then utilitydata.job.positions = { } end
 
 utilitydata.job.positions.collected={
+ ["columnarea"]={
+  {
+   ["c"]=1,
+   ["i"]=1,
+   ["p"]=1,
+   ["x"]=6526379,
+  },
+  {
+   ["c"]=2,
+   ["i"]=1,
+   ["p"]=1,
+   ["x"]=20168961,
+  },
+ },
+ ["p"]={
+  {
+   ["i"]=1,
+   ["p"]=1,
+   ["pi"]=1179000,
+   ["y"]=50896655,
+  },
+  49848079,
+  48799503,
+  47750927,
+  37265167,
+  {
+   ["i"]=2,
+   ["p"]=1,
+   ["pi"]=1179000,
+   ["y"]=35168015,
+  },
+  {
+   ["i"]=3,
+   ["p"]=1,
+   ["r"]="columnarea:1",
+   ["y"]=35168015,
+  },
+  {
+   ["i"]=4,
+   ["ls"]=786000,
+   ["p"]=1,
+   ["pi"]=1179000,
+   ["r"]="columnarea:1",
+   ["y"]=33070863,
+  },
+  30973711,
+  {
+   ["i"]=5,
+   ["ls"]=1572000,
+   ["p"]=1,
+   ["pi"]=1179000,
+   ["r"]="columnarea:1",
+   ["y"]=28876559,
+  },
+  27827983,
+  26779407,
+  {
+   ["i"]=4,
+   ["ls"]=786000,
+   ["p"]=1,
+   ["pi"]=1179000,
+   ["r"]="columnarea:1",
+   ["y"]=24682255,
+  },
+  23633679,
+  {
+   ["i"]=6,
+   ["p"]=1,
+   ["r"]="columnarea:2",
+   ["y"]=35168015,
+  },
+  {
+   ["i"]=7,
+   ["ls"]=786000,
+   ["p"]=1,
+   ["pi"]=1179000,
+   ["r"]="columnarea:2",
+   ["y"]=33070863,
+  },
+  32022287,
+  29925135,
+  27827983,
+  26779407,
+  {
+   ["i"]=2,
+   ["p"]=2,
+   ["pi"]=1179000,
+   ["y"]=50896655,
+  },
+  47750927,
+  44605199,
+  42508047,
+  {
+   ["i"]=1,
+   ["p"]=2,
+   ["pi"]=1179000,
+   ["y"]=35168015,
+  },
+  28876559,
+  21536527,
+ },
+ ["page"]={
+  {
+   ["h"]=55380990,
+   ["w"]=39158276,
+   ["x"]=0,
+   ["y"]=0,
+  },
+ },
  ["shared"]={
   ["x_h_d"]={},
-  ["x_h_d_hs"]={},
-  ["x_y_w_h"]={},
-  ["y_w_h_d"]={},
+  ["x_h_d_hs"]={
+   {
+    ["d"]=293600,
+    ["h"]=754976,
+    ["hs"]=26105517,
+    ["x"]=6526379,
+   },
+   {
+    ["d"]=293600,
+    ["h"]=754976,
+    ["hs"]=26105517,
+    ["x"]=7705379,
+   },
+   {
+    ["d"]=293600,
+    ["h"]=754976,
+    ["hs"]=12462935,
+    ["x"]=11137901,
+   },
+   {
+    ["d"]=293600,
+    ["h"]=754976,
+    ["hs"]=12462935,
+    ["x"]=7312379,
+   },
+   {
+    ["d"]=293600,
+    ["h"]=754976,
+    ["hs"]=12462935,
+    ["x"]=8098379,
+   },
+   {
+    ["d"]=293600,
+    ["h"]=754976,
+    ["hs"]=12462935,
+    ["x"]=25514607,
+   },
+   {
+    ["d"]=293600,
+    ["h"]=754976,
+    ["hs"]=12462935,
+    ["x"]=20954961,
+   },
+  },
+  ["x_y_w_h"]={
+   {
+    ["h"]=43471267,
+    ["w"]=26105517,
+    ["x"]=6526379,
+    ["y"]=8180364,
+   },
+  },
+  ["y_w_h_d"]={
+   {
+    ["d"]=293600,
+    ["h"]=12289312,
+    ["w"]=12462935,
+    ["y"]=23633679,
+   },
+  },
+ },
+ ["text"]={
+  {
+   ["i"]=1,
+   ["p"]=1,
+  },
+  2,
  },
  ["user"]={},
 }
@@ -54,6 +227,13 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.passes then utilitydata.job.passes = { } end
 
 utilitydata.job.passes.collected={
+ ["itemgroup:itemize:1"]={
+  { 4, 0 },
+  { 3, 0 },
+ },
+ ["itemgroup:itemize:2"]={
+  { 5, 0 },
+ },
 }
 
 if not utilitydata.job then utilitydata.job = { } end
@@ -90,9 +270,35 @@ utilitydata.structures.sections.collected={
  {
   ["block"]="bodypart",
   ["conversionset"]="default",
-  ["hidenumber"]=true,
   ["language"]="en",
   ["numbers"]=3,
+  ["ownnumbers"]=2,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=4,
+  ["ownnumbers"]=2,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=5,
+  ["ownnumbers"]=2,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=6,
   ["ownnumbers"]=2,
   ["separatorset"]="default",
   ["set"]="all",
@@ -128,7 +334,8 @@ utilitydata.structures.counters.collected={
   { 0, 0 },
  },
  ["itemgroup:itemize"]={
-  { 0, 0 },
+  { 0, 0, 4, 5 },
+  { 0, 3, 0, 0, 0, 0, 0, 0, 0, 0 },
  },
  ["itemgroup:itemize:note"]={
   { 0, 0 },
@@ -140,10 +347,10 @@ utilitydata.structures.counters.collected={
   { 0, 0 },
  },
  ["realpage"]={
-  { 1 },
+  { 2 },
  },
  ["subpage"]={
-  { 1 },
+  { 2 },
  },
  ["table"]={
   { 0, 0 },
@@ -152,7 +359,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 1 },
+  { 2 },
  },
 }
 
@@ -161,31 +368,83 @@ if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
 
 utilitydata.structures.lists.collected={
  {
-  ["metadata"]=4,
-  ["numberdata"]=5,
+  ["metadata"]=7,
+  ["numberdata"]=8,
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=1,
    ["realpage"]=1,
    ["section"]=1,
+   ["x"]=32631896,
+   ["y"]=43556623,
   },
   ["titledata"]={
    ["label"]="chapter",
-   ["title"]="What is ISHTA Yoga?",
+   ["title"]="Anatomy I: Basics",
   },
  },
  {
-  ["metadata"]=6,
-  ["numberdata"]=7,
+  ["metadata"]=9,
+  ["numberdata"]=10,
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=2,
    ["realpage"]=1,
    ["section"]=2,
+   ["x"]=32631896,
+   ["y"]=39362319,
   },
   ["titledata"]={
    ["label"]="section",
-   ["title"]="What does yoga mean to me?",
+   ["title"]="Briefly describe each of these tissues and its function: Muscle, Ligament, Tendon and Cartilage",
+  },
+ },
+ {
+  ["metadata"]=9,
+  ["numberdata"]=11,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=3,
+   ["realpage"]=2,
+   ["section"]=3,
+   ["x"]=32631896,
+   ["y"]=37265167,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="The elbow is a hinge joint and the hip is a ball-and-socket joint. What are the movements of a hinge joint? Name the plane.",
+  },
+ },
+ {
+  ["metadata"]=9,
+  ["numberdata"]=12,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=4,
+   ["realpage"]=2,
+   ["section"]=4,
+   ["x"]=32631896,
+   ["y"]=30973711,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="What are the movements of a ball-and-socket joint? In how many planes does a ball-and-socket joint move and what are the actions in each of the planes?",
+  },
+ },
+ {
+  ["metadata"]=9,
+  ["numberdata"]=13,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=5,
+   ["realpage"]=2,
+   ["section"]=5,
+   ["x"]=32631896,
+   ["y"]=23633679,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="What is the job of an agonist? What is the job of a synergist?",
   },
  },
 }
@@ -197,8 +456,15 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=1,
-  ["numberdata"]=8,
-  ["prefixdata"]=9,
+  ["numberdata"]=14,
+  ["prefixdata"]=15,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=2,
+  ["numberdata"]=14,
+  ["prefixdata"]=15,
   ["state"]="start",
  },
 }
@@ -272,9 +538,12 @@ utilitydata.job.packed={
  ["index"]={
   { 0, 1 },
   {
-   [2]="1",
+   [2]="3",
   },
   { 0, 1, 1 },
+  { 0, 1, 2 },
+  { 0, 1, 3 },
+  { 0, 1, 4 },
   {
    ["catcodes"]=9,
    ["coding"]="tex",
@@ -298,14 +567,40 @@ utilitydata.job.packed={
    ["increment"]="yes",
    ["kind"]="section",
    ["level"]=3,
-   ["name"]="questionnonumber",
+   ["name"]="question",
   },
   {
    ["block"]="bodypart",
    ["conversionset"]="default",
-   ["hidenumber"]=true,
    ["language"]="en",
    ["numbers"]=3,
+   ["ownnumbers"]=2,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=4,
+   ["ownnumbers"]=2,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=5,
+   ["ownnumbers"]=2,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=6,
    ["ownnumbers"]=2,
    ["separatorset"]="default",
    ["set"]="all",

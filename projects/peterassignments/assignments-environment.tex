@@ -6,25 +6,9 @@
 %% F O N T S
 %%
 
-\setupbodyfont[coelacanth,12pt]
-\definebodyfontenvironment[12pt][interlinespace=16pt]
-\definebodyfontenvironment[13pt][interlinespace=15pt]
-\definesymbol[dotmath][\fontchar{dotmath}] % by name
-
-\definefontsynonym[Nymphette][file:Nymphette.ttf]
-%\definesymbol[mybullet1][\getglyph{Nymphette}{\char"0073}]
-
-\definefontsynonym[sabonnext][file:SabonNextLTPro-Regular]
-%\definesymbol[mybullet1][\getglyph{sabonnext}{\char772}]
-%\definesymbol[mybullet1][\getglyph{sabonnext}{\fontchar{orn.058}}]
-
-\definefontsynonym[coelacanth][file:Coelacanth]
-%\definesymbol[mybullet2][\getglyph{coelacanth}{\char"22C5}]
-
-\definefontsynonym[kingthings][file:kingthings.ttf]
-%\definesymbol[mybullet1][\getglyph{kingthings}{\char"004D}]
-\definesymbol[mybullet1][\raise0.2ex\hbox{\definedfont[file:kingthings at 16pt]M}]
-\definesymbol[mybullet2][\raise0.2ex\hbox{{\definedfont[file:kingthings at 15pt]A}}]
+\setupbodyfont[sabonnext,11pt]
+\definebodyfontenvironment[11pt][interlinespace=14.5pt]
+\definesymbol[leaf][\fontchar{leaf}] % by name
 
 %%
 %% P A P E R   A N D   P A G E   S I Z E
@@ -39,18 +23,18 @@
 \setuplayout[
     grid=yes,
    % TOP TO BOTTOM    
-    topspace=20mm,
+    topspace=30mm,
     header=0\baselineskip,
     headerdistance=0\baselineskip,
-    height=250mm,
+    height=240mm,
     footerdistance=2\baselineskip,
     footer=1\lineheight,
    % INNER TO OUTER
 %    backspace=\dimexpr(\paperwidth/8)\relax,% twosided
-    backspace=35mm,% onesided
+    backspace=45mm,% onesided
     leftmargin=64pt,
     leftmargindistance=9pt,
-    width=140mm,
+    width=120mm,
     rightmargin=64pt,
     rightmargindistance=16pt,
 ]
@@ -94,13 +78,13 @@
 \setuphead[chapter]
     [page=no,
     header=empty,
-    style=\bf,
-    alternative=middle,
+    style=\tf,
+%    alternative=middle,
     numberstyle={\feature[+][lnum]},
 %    numbercommand=\Dot,
 %    textcommand={\kerncharacters[0.16]\spaceskip0.35em},
 %    deeptextcommand=\WORD,
-    after={\blank[2*line]},
+    after={\blank[line]},
     before=,
 ]
 
@@ -112,7 +96,7 @@
 
 \definehead[question][section]
 \setuphead[question][%alternative=inmargin,
-style=\it,interlinespace=14pt,
+style=\sl,interlinespace=14pt,
 before={\blank[line]},after={\blank[line]},]
 
 \definehead[questionnonumber][question]
@@ -125,24 +109,11 @@ before={\blank[line]},after={\blank[line]},]
 \setupindenting[yes,medium] % indent paragraphs
 %\setupwhitespace[no] % whitespace between paragraphs
 
-%\setupspacing[packed] % French spacing
+\setupspacing[packed] % French spacing
 
 \setupitaliccorrection[text]
 
 \setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
-
-
-%%
-%% I T E M I Z E
-%%
-
-\setupitemize[packed]
-\setupitemgroup
-  [itemize]
-  [
-    leftmargin=0em,
-    width=1em,
-  ]
 
 %%
 %% H E A D E R S   &   F O O T E R S
@@ -154,14 +125,13 @@ before={\blank[line]},after={\blank[line]},]
                  [] % verso inner
                  [\hfill{\kerncharacters[0.17]\sc \getmarking[chapter]}\hfill] % verso outer
 
-\setupfootertexts[\hfill\lower0.5em \hbox{\definedfont[file:Nymphette.ttf at 24pt]1} \hskip0.2em\pagenumber\hskip0.2em\ \lower0.5em 
-\hbox{\definedfont[file:Nymphette.ttf at 24pt]2}\hfill] % recto outer
-                 [] % recto inner
-                 [] % verso inner
-                 [\hfill\lower0.5em \hbox{\definedfont[file:Nymphette.ttf at 24pt]1} \hskip0.2em\pagenumber\hskip0.2em\ \lower0.5em 
-\hbox{\definedfont[file:Nymphette.ttf at 24pt]2}\hfill] % verso outer
+%\setupfootertexts[\hfill\lower0.7em \hbox{\definedfont[file:FeFlow2 at 14pt]t} \pagenumber\ \lower0.7em 
+%\hbox{\definedfont[file:FeFlow2 at 14pt]s}\hfill] % recto outer
+%                 [] % recto inner
+%                 [] % verso inner
+%                 [\hfill{\definedfont[file:FeFlow2]t} \pagenumber\ {\definedfont[file:FeFlow2]s}\hfill] % verso outer
 
-%\setupfootertexts[\hfill\pagenumber\hfill][][][\hfill\pagenumber\hfill]
+\setupfootertexts[\hfill\pagenumber\hfill][][][\hfill\pagenumber\hfill]
 
 %%
 %% M I S C
@@ -174,15 +144,14 @@ before={\blank[line]},after={\blank[line]},]
 %
 
 \define[4]\nameanddate{%
-\startalignment[right]
+\startalignment[left]
 \noindent #1\par
-\noindent{\spaceskip0.3em\kerncharacters[0.08]\feature[-][onum]\feature[+][lnum]ISHTA 200H TT} Assignment\par
-\noindent Mentor: Peter Farko\par
+{\kerncharacters[0.1]ISHTA YTT} Homework\par
 %\blank[halfline]
 %\blank[halfline] 
 \noindent #2 {\sc #3, #4}\par
 \stopalignment
-\blank[1*line]}
+\blank[3*line]}
 
 %%
 %% D R O P   C A P S
@@ -235,6 +204,10 @@ before={\blank[line]},after={\blank[line]},]
 %\showgrid
 
 %\enabletrackers[visualizers.justification]
+
+%\adaptlayout[7][lines=+1]
+%\adaptlayout[11][lines=+1]
+%\adaptlayout[14][lines=+1]
 
 
 \stopenvironment

@@ -1,0 +1,39 @@
+\definefontfeature
+  [sabonnext-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [sabonnext-smallcaps]
+  [sabonnext-normal]
+  [smcp=yes,c2sc=no]
+
+\definefontfeature[smcp][smcp=yes]
+\definefontfeature[c2sc][c2sc=yes]
+\definefontfeature[lnum][lnum=yes]
+\definefontfeature[onum][onum=yes]
+\definefontfeature[pnum][pnum=yes]
+\definefontfeature[tnum][tnum=yes]
+\definefontfeature[sinf][sinf=yes]
+\definefontfeature[ss02][ss02=yes]
+\definefontfeature[sups][sups=yes]
+\definefontfeature[swsh][swsh=yes]
+
+\starttypescriptcollection[sabonnext]
+
+\starttypescript [serif] [sabonnext]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:SabonNextLTPro-Display]       [features=sabonnext-normal]
+       \definefontsynonym [SerifItalic]     [file:SabonNextLTPro-DisplayIt]        [features=sabonnext-normal]
+       \definefontsynonym [SerifBold]       [file:SabonNextLTPro-Bold]          [features=sabonnext-normal]
+       \definefontsynonym [SerifSlanted]    [file:SabonNextLTPro-DisplayIt]        [features=sabonnext-normal]
+       \definefontsynonym [SerifBoldItalic] [file:SabonNextLTPro-BoldItalic]    [features=sabonnext-normal]
+       \definefontsynonym [SerifBoldSlanted][file:SabonNextLTPro-BoldItalic]    [features=sabonnext-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                             [features=sabonnext-smallcaps]
+\stoptypescript
+
+\starttypescript[sabonnext]
+     \definetypeface [sabonnext] [rm] [serif] [sabonnext] [default]
+\stoptypescript
+
+\stoptypescriptcollection

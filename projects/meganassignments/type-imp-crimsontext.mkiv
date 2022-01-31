@@ -1,0 +1,31 @@
+\definefontfeature
+  [crimsontext-normal]
+  [default]
+  [onum=yes,pnum=yes]
+
+\definefontfeature
+  [crimsontext-smallcaps]
+  [crimsontext-normal]
+  [smcp=yes,c2sc=no]
+
+\definefontfeature
+  [lnum]
+  [onum=no,lnum=yes]
+
+\starttypescriptcollection[crimsontext]
+
+\starttypescript [serif] [crimsontext]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]       [file:CrimsonText-Regular.ttf] [features=crimsontext-normal]
+       \definefontsynonym [SerifItalic] [file:CrimsonText-Italic.ttf]  [features=crimsontext-normal]
+       \definefontsynonym [SerifBold]   [file:CrimsonText-Bold.ttf]    [features=crimsontext-normal]
+       \definefontsynonym [SerifCaps]   [Serif]                        [features=crimsontext-smallcaps]
+\stoptypescript
+
+\starttypescript[crimsontext]
+     \definetypeface [crimsontext]  [rm] [serif]  [crimsontext] [default] [rscale=1]
+%     \definetypeface [crimsontext] [tt] [mono]   [dejavu]      [default] [rscale=0.8] % 
+%     \definetypeface [crimsontext] [mm] [math]   [bonum]       [default] [rscale=0.8] % 
+\stoptypescript
+
+\stoptypescriptcollection
