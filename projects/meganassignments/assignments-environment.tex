@@ -16,32 +16,15 @@
 \feature[-][tnum]
 \feature[+][pnum]
 
+\definebodyfontenvironment[12pt][interlinespace=16pt]
+
 \definefontsynonym[zapfswash][file:ZapfinoExtraLT-Ornaments]
 \definesymbol[zapfswash][{\definedfont[file:ZapfinoExtraLT-Ornaments at 30pt]Æ}]
 
-\definebodyfontenvironment[12pt][interlinespace=16pt]
-\definebodyfontenvironment[13pt][interlinespace=16pt]
-\definesymbol[dotmath][\fontchar{dotmath}] % by name
-
-\definefontsynonym[Nymphette][file:Nymphette.ttf]
-%\definesymbol[mybullet1][\getglyph{Nymphette}{\char"0073}]
-
-\definefontsynonym[sabonnext][file:SabonNextLTPro-Regular]
-%\definesymbol[mybullet1][\getglyph{sabonnext}{\char772}]
-%\definesymbol[mybullet1][\getglyph{sabonnext}{\fontchar{orn.058}}]
-
-\definefontsynonym[coelacanth][file:Coelacanth]
-%\definesymbol[mybullet2][\getglyph{coelacanth}{\char"22C5}]
-
 \definefontsynonym[kingthings][file:kingthings.ttf]
-%\definesymbol[mybullet1][\getglyph{kingthings}{\char"004D}]
 \definesymbol[mybullet1][\raise0.2ex\hbox{\definedfont[file:kingthings at 16pt]M}]
 \definesymbol[mybullet2][\raise0.2ex\hbox{{\definedfont[file:kingthings at 15pt]A}}]
 
-\definefontsynonym[adforns][file:adforns]
-%\definesymbol[mybullet1][\raise0.2ex\hbox{\definedfont[file:adforns at 10pt]q}]
-%\definesymbol[mybullet1][\raise0ex\hbox{\definedfont[file:ZapfinoExtraLT-Ornaments at 10pt]Æ}]
-%\definesymbol[mybullet2][\raise0.2ex\hbox{\definedfont[file:adforns at 10pt]c}]
 
 %%
 %% P A P E R   A N D   P A G E   S I Z E
@@ -56,10 +39,10 @@
 \setuplayout[
     grid=yes,
    % TOP TO BOTTOM    
-    topspace=20mm,
+    topspace=30mm,
     header=0\baselineskip,
     headerdistance=0\baselineskip,
-    height=250mm,
+    height=\dimexpr(227mm+3\baselineskip)\relax,
     footerdistance=2\baselineskip,
     footer=1\lineheight,
    % INNER TO OUTER
@@ -129,7 +112,7 @@
 
 \definehead[question][section]
 \setuphead[question][%alternative=inmargin,
-style=\it,interlinespace=14pt,
+style=\it,interlinespace=16pt,
 before={\blank[line]},after={\blank[line]},]
 
 \definehead[questionnonumber][question]
@@ -196,8 +179,6 @@ before={\blank[line]},after={\blank[line]},]
 \noindent #1\par
 \noindent{\spaceskip0.3em\kerncharacters[0.08]\feature[-][onum]\feature[+][lnum]ISHTA 200H TT} Assignment\par
 \noindent Mentor: Peter Farko\par
-%\blank[halfline]
-%\blank[halfline] 
 \noindent #2 {\sc #3, #4}\par
 \stopalignment
 \blank[1*line]}
