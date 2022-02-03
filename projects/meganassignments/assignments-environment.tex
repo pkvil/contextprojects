@@ -21,6 +21,11 @@
 \definefontsynonym[zapfswash][file:ZapfinoExtraLT-Ornaments]
 \definesymbol[zapfswash][{\definedfont[file:ZapfinoExtraLT-Ornaments at 30pt]Æ}]
 
+\definesymbol[bulletstar][*]
+
+\definefontsynonym[zapfornitc][file:ZapfDingbatsITCbyBT-Regular]
+\definesymbol[zapfarrow][\getglyph{zapfornitc}{\char"00D5}]
+
 \definefontsynonym[kingthings][file:kingthings.ttf]
 \definesymbol[mybullet1][\raise0.2ex\hbox{\definedfont[file:kingthings at 16pt]M}]
 \definesymbol[mybullet2][\raise0.2ex\hbox{{\definedfont[file:kingthings at 15pt]A}}]
@@ -143,6 +148,7 @@ before={\blank[line]},after={\blank[line]},]
     leftmargin=0em,
     width=1.2em,
     before=,
+    after=,
   ]
 
 %%
