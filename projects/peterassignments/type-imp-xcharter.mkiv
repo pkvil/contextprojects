@@ -1,0 +1,39 @@
+\definefontfeature
+  [xcharter-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [xcharter-smallcaps]
+  [xcharter-normal]
+  [smcp=yes,c2sc=no]
+
+\definefontfeature[smcp][smcp=yes]
+\definefontfeature[c2sc][c2sc=yes]
+\definefontfeature[lnum][lnum=yes]
+\definefontfeature[onum][onum=yes]
+\definefontfeature[pnum][pnum=yes]
+\definefontfeature[tnum][tnum=yes]
+\definefontfeature[sinf][sinf=yes]
+\definefontfeature[ss02][ss02=yes]
+\definefontfeature[sups][sups=yes]
+\definefontfeature[swsh][swsh=yes]
+
+\starttypescriptcollection[xcharter]
+
+\starttypescript [serif] [xcharter]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:XCharter-Roman]       [features=xcharter-normal]
+       \definefontsynonym [SerifItalic]     [file:XCharter-Italic]      [features=xcharter-normal]
+       \definefontsynonym [SerifBold]       [file:XCharter-Bold]        [features=xcharter-normal]
+       \definefontsynonym [SerifSlanted]    [file:XCharter-Slanted]     [features=xcharter-normal]
+       \definefontsynonym [SerifBoldItalic] [file:XCharter-BoldItalic]  [features=xcharter-normal]
+       \definefontsynonym [SerifBoldSlanted][file:XCharter-BoldSlanted] [features=xcharter-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                     [features=xcharter-smallcaps]
+\stoptypescript
+
+\starttypescript[xcharter]
+     \definetypeface [xcharter] [rm] [serif] [xcharter] [default]
+\stoptypescript
+
+\stoptypescriptcollection

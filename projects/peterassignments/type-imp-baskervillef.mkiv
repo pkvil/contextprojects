@@ -1,0 +1,32 @@
+\definefontfeature
+  [baskervillef-normal]
+  [default]
+  [onum=yes,pnum=yes,tlig=yes]
+
+\definefontfeature
+  [baskervillef-smallcaps]
+  [baskervillef-normal]
+  [smcp=yes,script=latn]
+
+\definefontfeature
+  [lnum]
+  [onum=no,lnum=yes]
+
+\starttypescriptcollection[baskervillef]
+
+\starttypescript [serif] [baskervillef]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:Baskervillef-Regular]       [features=baskervillef-normal]
+       \definefontsynonym [SerifItalic]     [file:Baskervillef-Italic]      [features=baskervillef-normal]
+       \definefontsynonym [SerifBold]       [file:Baskervillef-Bold]        [features=baskervillef-normal]
+       \definefontsynonym [SerifBoldItalic] [file:Baskervillef-BoldItalic]  [features=baskervillef-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                     [features=baskervillef-smallcaps]
+\stoptypescript
+
+\starttypescript[baskervillef]
+     \definetypeface [baskervillef] [rm] [serif] [baskervillef] [default] [rscale=1]
+%     \definetypeface [baskervillef] [tt] [mono]  [dejavu]     [default] [rscale=0.8] % 
+%     \definetypeface [baskervillef] [mm] [math]  [bonum]      [default] [rscale=0.8] % 
+\stoptypescript
+
+\stoptypescriptcollection
