@@ -1,0 +1,44 @@
+\startenvironment poliphilus-environment
+
+\mainlanguage[en]
+
+\setupbodyfont[etbb,10pt]
+\definebodyfontenvironment[10pt][interlinespace=13pt]
+%39 lines
+\setupalign[hanging,hz] % microtypography, allow some stretching
+
+\definepapersize[sixnine][width=6in, height=9in]
+\setuppapersize[sixnine][sixnine]
+
+\setuplayout[
+    grid=yes,
+   % TOP TO BOTTOM    
+    topspace=\dimexpr(\paperwidth/9)\relax,
+    header=0\baselineskip,
+    headerdistance=0\baselineskip,
+    height=\dimexpr(10.2\paperwidth/9)+2\baselineskip\relax,
+    footerdistance=1\baselineskip,
+    footer=1\lineheight,
+   % INNER TO OUTER
+    backspace=\dimexpr(\paperwidth/9)\relax,% onesided
+    leftmargin=64pt,
+    leftmargindistance=9pt,
+    width=\dimexpr(6\paperwidth/9)\relax,
+    rightmargin=64pt,
+    rightmargindistance=16pt,
+]
+
+\setuppagenumbering[location=, alternative=doublesided]
+
+\setupfootertexts[]
+                 [\pagenumber\quad]
+                 [\quad\pagenumber]
+                 []
+
+
+\setupindenting[yes,medium] % indent paragraphs
+\setupspacing[packed] % French spacing
+
+%\showgrid
+
+\stopenvironment

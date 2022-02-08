@@ -1,19 +1,51 @@
 \setupbodyfont[11pt]
 
 \define\displayalphabetlength{%
+    \blank[line]
     \tracedfontname{Serif}\par
     \setbox\alphabetbox=\hbox{abcdefghijklmnopqrstuvwxyz}
     abcdefghijklmnopqrstuvwxyz = \the\dimexpr(\wd\alphabetbox)\par
-    \blank[line]
 }
 
 \starttext
 \newbox\alphabetbox
 \displayalphabetlength
 
-\switchtobodyfont[cochineal,11pt]
-11pt\par
+\switchtobodyfont[sabonnext,10pt]
 \displayalphabetlength
+10pt\par
+Measure: 24pc = 65 characters
+
+\switchtobodyfont[sabonnext,11pt]
+\displayalphabetlength
+11pt\par
+Measure: 26pc = 64 characters
+
+\switchtobodyfont[sabonnext,12pt]
+\displayalphabetlength
+12pt\par
+Measure: 28pc = 64 characters
+
+
+\switchtobodyfont[ajenson,10pt]
+\displayalphabetlength
+10pt\par
+Measure: 22 pc = 67 characters
+
+
+\switchtobodyfont[ajenson,11pt]
+\displayalphabetlength
+11pt\par
+Measure: 24pc = 66 characters
+
+
+\switchtobodyfont[ajenson,12pt]
+\displayalphabetlength
+12pt\par
+Measure: 26pc = 66 characters
+
+
+---
 
 \switchtobodyfont[ebgaramond,12pt]
 \displayalphabetlength
