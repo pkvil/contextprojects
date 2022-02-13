@@ -1,17 +1,21 @@
 \startenvironment suif-environment
 
-\mainlanguage[en]
+\mainlanguage[sv]
 
-\setupbodyfont[sabonnext,11pt]
-\definebodyfontenvironment[11pt][interlinespace=15pt]
+\hyphenation[samman-träff-and-en,manu-fakturhandlaren]
+
+\setupbodyfont[etbb,12pt]
+\definebodyfontenvironment[12pt][interlinespace=15.55pt]
 %39 lines
 \setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
 
-\definepapersize[sixnine][width=6in, height=9in]
-\setuppapersize[sixnine][sixnine]
+\definepapersize[suif][width=14cm, height=21cm]
+\setuppapersize[suif][suif]
 
 \setuplayout[
     grid=yes,
+    marking=yes,
+    location={middle,left,doublesided},
    % TOP TO BOTTOM    
     topspace=\dimexpr(\paperheight/9)\relax,
     header=0\baselineskip,

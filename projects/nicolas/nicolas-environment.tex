@@ -2,16 +2,20 @@
 
 \mainlanguage[en]
 
-\setupbodyfont[ajenson,11pt]
-\definebodyfontenvironment[11pt][interlinespace=13.15pt]
+\setupbodyfont[arnopro,12pt]
+%\definebodyfontenvironment[10pt][interlinespace=15pt]
+\definebodyfontenvironment[12pt][interlinespace=15pt]
 %39 lines
-\setupalign[hanging,hz] % microtypography, allow some stretching
+\setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
 
 \definepapersize[sixnine][width=6in, height=9in]
 \setuppapersize[sixnine][sixnine]
 
+\def\bcor{0mm}
+
 \setuplayout[
     grid=yes,
+    location={middle,left},
    % TOP TO BOTTOM    
     topspace=\dimexpr(\paperheight/9)\relax,
     header=0\baselineskip,
@@ -20,7 +24,7 @@
     footerdistance=2\baselineskip,
     footer=2\lineheight,
    % INNER TO OUTER
-    backspace=\dimexpr(\paperwidth/9)\relax,% onesided
+    backspace=\dimexpr(\paperwidth/9)+\bcor\relax,% onesided
     leftmargin=64pt,
     leftmargindistance=9pt,
     width=\dimexpr(6\paperwidth/9)\relax,

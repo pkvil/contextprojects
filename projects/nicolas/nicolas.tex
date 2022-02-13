@@ -1,22 +1,43 @@
 \environment nicolas-environment
 
+
+\definelayer[mybg]	% name of the layer
+    [x=0mm, y=0mm,	% from upper left corner of paper
+     width=\paperwidth, height=\paperheight, % let the layer cover the full paper
+     ]
+
+\setlayer[mybg]	% name of the layer
+    [hoffset=0mm, voffset=0mm]  % placement (from upper left corner of the layer)
+    {\externalfigure[drawing.pdf]}  % the actual contents of the layer
+
+
+
+
+
 \starttext
 
-\startlines
-Page layout after Golden Canon of Page Construction.
-Set with Adobe Jenson 11/13.15, 24pc measure.
-Page proportion: 1.5
-Textblock proportion: 1.5
-Margins: spine = page width / 9; top = page height / 9; edge = 2 $\times$ spine
+%\setupbackgrounds[page][background=mybg]
 
-\stoplines
+%\startlines
+%Page layout after Golden Canon of Page Construction.
+%Set with Adobe Jenson 11/13, 24pc measure.
+%Page proportion: 1.5
+%Textblock proportion: 1.5
+%Margins: spine = page width / 9; top = page height / 9; edge = 2 $\times$ spine
+%
+%\stoplines
 
+%\blank[line]
+
+
+\noindent Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta sit amet ex at placerat. Duis sit amet venenatis augue. ÅÄÖ Pellentesque vestibulum elit ac lobortis rhoncus. Vestibulum ullamcorper molestie nisl, quis fermentum dui euismod ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi a fermentum erat. Nam sagittis semper lectus, non pharetra mauris euismod sit amet.
+
+\switchtobodyfont[11pt,ajenson]
 \blank[line]
 
-\noindent Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta sit amet ex at placerat. Duis sit amet venenatis augue. Pellentesque vestibulum elit ac lobortis rhoncus. Vestibulum ullamcorper molestie nisl, quis fermentum dui euismod ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi a fermentum erat. Nam sagittis semper lectus, non pharetra mauris euismod sit amet.
 
-Suspendisse potenti. Aenean auctor iaculis tortor, id dignissim arcu accumsan sed. Donec semper sagittis est et tempor. Duis non sapien tincidunt purus maximus imperdiet. Proin tempus fermentum fringilla. Duis tincidunt nunc a convallis ornare. Praesent vitae imperdiet dolor. Integer dictum tincidunt nunc, ac pretium risus scelerisque vel. Aliquam ut nisl id ipsum convallis sollicitudin. Cras interdum nisi non dictum suscipit.
-
+\noindent Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta sit amet ex at placerat. Duis sit amet venenatis augue. Pellentesque vestibulum elit ac lobortis rhoncus. Vestibulum ullamcorper molestie nisl, quis fermentum dui euismod ac. ÅÄÖ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi a fermentum erat. Nam sagittis semper lectus, non pharetra mauris euismod sit amet.
+\page[yes]
 Aliquam erat volutpat. Quisque interdum pulvinar quam. Cras pellentesque arcu sed blandit placerat. Duis ultrices malesuada mauris in placerat. Nunc non ipsum eu mauris lobortis efficitur. Nulla consequat scelerisque fermentum. Fusce iaculis molestie est aliquam ultrices.
 
 Integer tellus ante, scelerisque in porttitor eu, varius sit amet nunc. Donec convallis mauris in lacinia convallis. Vivamus sagittis rhoncus sollicitudin. Proin semper libero sit amet justo viverra efficitur. Duis leo ante, laoreet at turpis eget, faucibus convallis metus. Aliquam elementum libero id justo tincidunt mollis. Proin non maximus massa. Vestibulum nec bibendum nibh. Fusce enim elit, interdum facilisis purus non, suscipit dapibus ligula. Integer pellentesque tincidunt mi, nec auctor odio. In semper mauris eu tincidunt tempor. Curabitur tincidunt aliquet diam eu dignissim. Cras eget vestibulum leo, nec aliquam quam. Fusce neque nulla, vulputate vel justo ac, ultrices auctor mauris.

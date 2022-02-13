@@ -1,0 +1,40 @@
+\definefontfeature
+  [arnopro-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [arnopro-smallcaps]
+  [arnopro-normal]
+  [smcp=yes,c2sc=no]
+
+\definefontfeature[liga][liga=yes]
+\definefontfeature[smcp][smcp=yes]
+\definefontfeature[c2sc][c2sc=yes]
+\definefontfeature[lnum][lnum=yes]
+\definefontfeature[onum][onum=yes]
+\definefontfeature[pnum][pnum=yes]
+\definefontfeature[tnum][tnum=yes]
+\definefontfeature[sinf][sinf=yes]
+\definefontfeature[ss02][ss02=yes]
+\definefontfeature[sups][sups=yes]
+\definefontfeature[swsh][swsh=yes]
+
+\starttypescriptcollection[arnopro]
+
+\starttypescript [serif] [arnopro]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:ArnoPro-Regular]     [features=arnopro-normal]
+       \definefontsynonym [SerifItalic]     [file:arnopro-Italic]      [features=arnopro-normal]
+       \definefontsynonym [SerifBold]       [file:arnopro-Bold]        [features=arnopro-normal]
+       \definefontsynonym [SerifSlanted]    [file:arnopro-Italic]      [features=arnopro-normal]
+       \definefontsynonym [SerifBoldItalic] [file:arnopro-BoldItalic]  [features=arnopro-normal]
+       \definefontsynonym [SerifBoldSlanted][file:arnopro-BoldItalic]  [features=arnopro-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                    [features=arnopro-smallcaps]
+\stoptypescript
+
+\starttypescript[arnopro]
+     \definetypeface [arnopro] [rm] [serif] [arnopro] [default]
+\stoptypescript
+
+\stoptypescriptcollection
