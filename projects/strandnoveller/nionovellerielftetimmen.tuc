@@ -202,10 +202,10 @@ utilitydata.structures.counters.collected={
   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
  },
  ["realpage"]={
-  { 64 },
+  { 68 },
  },
  ["subpage"]={
-  { 64 },
+  { 68 },
  },
  ["table"]={
   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -214,7 +214,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 60 },
+  { 64 },
  },
 }
 
@@ -348,7 +348,7 @@ utilitydata.structures.lists.collected={
   ["references"]={
    ["block"]="bodypart",
    ["internal"]=9,
-   ["realpage"]=57,
+   ["realpage"]=59,
    ["reference"]="halet",
    ["section"]=9,
   },
@@ -807,6 +807,34 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=60,
+  ["numberdata"]=20,
+  ["prefixdata"]=21,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=61,
+  ["numberdata"]=20,
+  ["prefixdata"]=21,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=62,
+  ["numberdata"]=20,
+  ["prefixdata"]=21,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=63,
+  ["numberdata"]=20,
+  ["prefixdata"]=21,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["number"]=64,
   ["numberdata"]=20,
   ["prefixdata"]=21,
   ["state"]="start",
