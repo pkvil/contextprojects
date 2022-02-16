@@ -7,10 +7,10 @@
 %%
 
 
-\setupbodyfont[arnopro,13pt]
+\setupbodyfont[arnopro,12pt]
 \definebodyfontenvironment[10pt][interlinespace=12pt]
 \definebodyfontenvironment[11pt][interlinespace=15pt]
-\definebodyfontenvironment[12pt][interlinespace=16pt]
+\definebodyfontenvironment[12pt][interlinespace=15pt]
 \definebodyfontenvironment[13pt][interlinespace=15pt]
 \definesymbol[leaf][\fontchar{leaf}] % by name
 
@@ -19,7 +19,8 @@
 %%
 
 \definepapersize[mypage][width=6in, height=9in]
-\setuppapersize[A5][A5]
+\definepapersize[mypage2][width=14cm, height=21cm]
+\setuppapersize[mypage2][mypage2]
 
 %%
 %% P A G E   L A Y O U T
@@ -37,10 +38,10 @@
     footerdistance=1\baselineskip,
     footer=2\lineheight,
    % INNER TO OUTER
-    backspace=22.5mm,
+    backspace=15mm,
     leftmargin=64pt,
     leftmargindistance=9pt,
-    width=103mm,
+    width=110mm,
     rightmargin=64pt,
     rightmargindistance=16pt,
 ]
