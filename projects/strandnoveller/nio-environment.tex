@@ -20,7 +20,7 @@
 
 \definepapersize[mypage][width=6in, height=9in]
 \definepapersize[mypage2][width=14cm, height=21cm]
-\setuppapersize[mypage2][mypage2]
+\setuppapersize[mypage2][A5]
 
 %%
 %% P A G E   L A Y O U T
@@ -87,7 +87,7 @@
     header=empty,
     alternative=middle,
     style={\tfc \feature[+][liningfigures]},
-    textcommand={\kerncharacters[0.17]},
+    textcommand={\spaceskip 0.3em\kerncharacters[0.17]},
     deeptextcommand=\WORD,
 ]
 
@@ -103,6 +103,9 @@
 \setupitaliccorrection[text]
 
 \setupalign[hanging,hz,verytolerant] % microtypography, allow some stretching
+
+\hyphenation{klink-er-golvet}
+\hyphenation{önsk-ade}
 
 %%
 %% H E A D E R S   &   F O O T E R S
@@ -132,14 +135,14 @@
 % M
 
 \define[1]\dropcapM{%
-    \definefont[capfont][file:ArnoPro-LightDisplay at 54pt]
+    \definefont[capfont][file:ArnoPro-LightDisplay at 58pt]
     \definefont[quotefont][Serif at 16pt]
     \noindent\kern -0.08em
     {\capfont M}
     \vskip-4\baselineskip
-    \dimen1=4.05em
-    \dimen2=4.15em
-    \dimen3=4.15em
+    \dimen1=4em
+    \dimen2=4em
+    \dimen3=4em
     \parshape 4
         \dimen1 \dimexpr\hsize-\dimen1
         \dimen2 \dimexpr\hsize-\dimen2       
@@ -148,23 +151,118 @@
     \noindent{\feature[-][liga]\kerncharacters[0.14]\sc #1}%            
 }
 
-% D
+% K
 
-\define[1]\dropcapD{%
-    \definefont[capfont][file:ArnoPro-LightDisplay at 54pt]
+\define[1]\dropcapK{%
+    \definefont[capfont][file:ArnoPro-LightDisplay at 57pt]
     \definefont[quotefont][Serif at 16pt]
     \noindent\kern -0.16em
-    {\capfont D}
+    {\capfont K}
     \vskip-4\baselineskip
-    \dimen1=3.1em
-    \dimen2=3.5em
-    \dimen3=3.2em
+    \dimen1=2.75em
+    \dimen2=3.1em
+    \dimen3=3.1em
     \parshape 4
         \dimen1 \dimexpr\hsize-\dimen1
         \dimen2 \dimexpr\hsize-\dimen2       
         \dimen3 \dimexpr\hsize-\dimen3     
         0pc \hsize                                   
-    \noindent{\feature[-][liga]\kerncharacters[0.14]\sc #1}%            
+    \noindent{\spaceskip 0.3em plus 0.1em minus 0.1em \feature[-][liga]\kerncharacters[0.14]\sc #1}%            
+}
+
+% D
+
+\define[1]\dropcapD{%
+    \definefont[capfont][file:ArnoPro-LightDisplay at 57pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern -0.16em
+    {\capfont D}
+    \vskip-4\baselineskip
+    \dimen1=2.9em
+    \dimen2=3.3em
+    \dimen3=3.1em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\spaceskip 0.3em \feature[-][liga]\kerncharacters[0.14]\sc #1}%            
+}
+
+% S
+
+\define[1]\dropcapS{%
+    \definefont[capfont][file:ArnoPro-LightDisplay at 57pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern -0.16em
+    {\capfont S}
+    \vskip-4\baselineskip
+    \dimen1=1.9em
+    \dimen2=2em
+    \dimen3=2em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\spaceskip 0.3em \feature[-][liga]\kerncharacters[0.14]\sc #1}%            
+}
+
+% J
+
+\define[1]\dropcapJ{%
+    \definefont[capfont][file:ArnoPro-Display at 45pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern 0.3em
+    \lower1.55ex \hbox{\capfont J}
+    \vskip-4\baselineskip
+    \dimen1=1.45em
+    \dimen2=1.45em
+    \dimen3=1.45em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\spaceskip 0.3em \feature[-][liga]\kerncharacters[0.14]\sc #1}%            
+}
+
+% C
+
+\define[1]\dropcapC{%
+    \definefont[capfont][file:ArnoPro-LightDisplay at 60pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern -0.3em
+    {\capfont C}
+    \vskip-4\baselineskip
+    \dimen1=3em
+    \dimen2=3em
+    \dimen3=3em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\spaceskip 0.3em plus 0.1em minus 0.1em \feature[-][liga]\kerncharacters[0.14]\sc #1\hairspace}%            
+}
+
+% S
+
+\define[1]\dropcapA{%
+    \definefont[capfont][file:ArnoPro-LightDisplay at 59pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern 0.15em
+    {\capfont A}
+    \vskip-4\baselineskip
+    \dimen1=2.25em
+    \dimen2=2.65em
+    \dimen3=3.25em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\spaceskip 0.3em \feature[-][liga]\kerncharacters[0.14]\sc #1}%            
 }
 
 %%
@@ -177,9 +275,12 @@
 
 %\enabletrackers[visualizers.justification]
 
-%\adaptlayout[7][lines=+1]
-%\adaptlayout[11][lines=+1]
-%\adaptlayout[14][lines=+1]
+\adaptlayout[16][lines=+1] %\adaptlayout[7][lines=+1]
+\adaptlayout[27][lines=+1] 
+\adaptlayout[34][lines=+1]
+\adaptlayout[48][lines=+1]
+\adaptlayout[49][lines=+1]
+
 
 
 \stopenvironment
