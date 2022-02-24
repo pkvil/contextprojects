@@ -1,0 +1,50 @@
+\definefontfeature
+  [ajenson-normal]
+  [default]
+  [onum=yes]
+
+\definefontfeature
+  [ajenson-smallcaps]
+  [ajenson-normal]
+  [smcp=yes,c2sc=no]
+
+\definefontfeature[smcp][smcp=yes]
+\definefontfeature[c2sc][c2sc=yes]
+\definefontfeature[lnum][lnum=yes]
+\definefontfeature[onum][onum=yes]
+\definefontfeature[pnum][pnum=yes]
+\definefontfeature[tnum][tnum=yes]
+\definefontfeature[sinf][sinf=yes]
+\definefontfeature[ss02][ss02=yes]
+\definefontfeature[sups][sups=yes]
+\definefontfeature[swsh][swsh=yes]
+
+\starttypescriptcollection[ajenson]
+
+\starttypescript [serif] [ajensonlight]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:AJensonPro-Lt]          [features=ajenson-normal]
+       \definefontsynonym [SerifItalic]     [file:AJensonPro-LtIt]           [features=ajenson-normal]
+       \definefontsynonym [SerifBold]       [file:AJensonPro-Semibold]             [features=ajenson-normal]
+       \definefontsynonym [SerifSlanted]    [file:AJensonPro-LtIt]          [features=ajenson-normal]
+       \definefontsynonym [SerifBoldItalic] [file:AJensonPro-SemiboldIt]       [features=ajenson-normal]
+       \definefontsynonym [SerifBoldSlanted][file:AJensonPro-SemiboldIt]      [features=ajenson-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                         [features=ajenson-smallcaps]
+\stoptypescript
+
+\starttypescript [serif] [ajensonregular]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:AJensonPro-Regular]          [features=ajenson-normal]
+       \definefontsynonym [SerifItalic]     [file:AJensonPro-It]           [features=ajenson-normal]
+       \definefontsynonym [SerifBold]       [file:AJensonPro-Bold]             [features=ajenson-normal]
+       \definefontsynonym [SerifSlanted]    [file:AJensonPro-It]          [features=ajenson-normal]
+       \definefontsynonym [SerifBoldItalic] [file:AJensonPro-BoldIt]       [features=ajenson-normal]
+       \definefontsynonym [SerifBoldSlanted][file:AJensonPro-BoldIt]      [features=ajenson-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                         [features=ajenson-smallcaps]
+\stoptypescript
+
+\starttypescript[ajenson]
+     \definetypeface [ajenson] [rm] [serif] [ajensonlight] [default]
+\stoptypescript
+
+\stoptypescriptcollection

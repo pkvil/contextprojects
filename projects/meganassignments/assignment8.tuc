@@ -2,7 +2,7 @@ local utilitydata = { }
 
 utilitydata.comment={
  ["escape"]="[===[ ... ]===]",
- ["file"]="suif",
+ ["file"]="assignment8",
  ["format"]="cont-en",
  ["stamp"]="2022.01.15 17:32",
  ["version"]=0x1.547ae147ae148p+0,
@@ -19,7 +19,7 @@ if not utilitydata.job.variables then utilitydata.job.variables = { } end
 
 utilitydata.job.variables.collected={
  ["macros"]={},
- ["randomseed"]=0x1.1617881ea2457p-1,
+ ["randomseed"]=0x1.fdc06fd5ce4c7p-1,
  ["sectionblockorder"]={},
 }
 
@@ -29,7 +29,7 @@ if not utilitydata.job.structure then utilitydata.job.structure = { } end
 utilitydata.job.structure.collected={
  ["branches"]={
   {
-   ["name"]="suif-environment",
+   ["name"]="assignments-environment",
    ["type"]="environment",
   },
  },
@@ -54,6 +54,9 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.passes then utilitydata.job.passes = { } end
 
 utilitydata.job.passes.collected={
+ ["itemgroup:itemize:1"]={
+  { 2, 0 },
+ },
 }
 
 if not utilitydata.job then utilitydata.job = { } end
@@ -78,6 +81,33 @@ if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.sections then utilitydata.structures.sections = { } end
 
 utilitydata.structures.sections.collected={
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=1,
+  ["ownnumbers"]=2,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=3,
+  ["ownnumbers"]=4,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=5,
+  ["ownnumbers"]=6,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -109,7 +139,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["itemgroup:itemize"]={
-  { 0 },
+  { 0, 2 },
  },
  ["itemgroup:itemize:note"]={
   { 0 },
@@ -121,10 +151,10 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["realpage"]={
-  { 6 },
+  { 1 },
  },
  ["subpage"]={
-  { 6 },
+  { 1 },
  },
  ["table"]={
   { 0 },
@@ -133,7 +163,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 6 },
+  { 1 },
  },
 }
 
@@ -141,6 +171,48 @@ if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
 
 utilitydata.structures.lists.collected={
+ {
+  ["metadata"]=7,
+  ["numberdata"]=8,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=1,
+   ["realpage"]=1,
+   ["section"]=1,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="What is the major fuction of the rotator cuff muscles?",
+  },
+ },
+ {
+  ["metadata"]=7,
+  ["numberdata"]=9,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=2,
+   ["realpage"]=1,
+   ["section"]=2,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="When you lift your arm in abduction or flexion beyond 45 degrees, what action must the scapula do?",
+  },
+ },
+ {
+  ["metadata"]=7,
+  ["numberdata"]=10,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=3,
+   ["realpage"]=1,
+   ["section"]=3,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Which 2 muscles stabilize the scapula on the back of the rib cage in Plank Poses and Chaturanga? In which direction does each muscle pull on the scapula?",
+  },
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -150,43 +222,8 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=1,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=2,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=3,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=4,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=5,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=6,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
+  ["numberdata"]=11,
+  ["prefixdata"]=12,
   ["state"]="start",
  },
 }
@@ -258,6 +295,53 @@ utilitydata.job.embedded.collected={
 
 utilitydata.job.packed={
  ["index"]={
+  { 0, 0, 1 },
+  {
+   [3]="8.1",
+  },
+  { 0, 0, 2 },
+  {
+   [3]="8.2",
+  },
+  { 0, 0, 3 },
+  {
+   [3]="8.3",
+  },
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["increment"]="yes",
+   ["kind"]="section",
+   ["level"]=3,
+   ["name"]="question",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=1,
+   ["ownnumbers"]=2,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=3,
+   ["ownnumbers"]=4,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=5,
+   ["ownnumbers"]=6,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
   {
    ["conversionset"]="pagenumber",
   },

@@ -2,15 +2,24 @@
 
 \mainlanguage[sv]
 
-\hyphenation[samman-träff-and-en,manu-fakturhandlaren]
-
-\setupbodyfont[etbb,12pt]
-\definebodyfontenvironment[12pt][interlinespace=15.55pt]
+\setupbodyfont[sabonnext,11pt]
+\definebodyfontenvironment[11pt][interlinespace=15pt]
 %39 lines
 \setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
 
-\definepapersize[suif][width=14cm, height=21cm]
-\setuppapersize[suif][suif]
+
+\newdimen\textareawidth \textareawidth=26pc
+\newdimen\textareaheight \textareaheight=1.5\textareawidth
+\newdimen\mypaperwidth \mypaperwidth=1.5\textareawidth
+\newdimen\mypaperheight \mypaperheight=1.5pc
+
+%11pt
+%26pc measure = 110mm
+%39pc paperwidth = 165mm
+%58.5pc paperheight = 247.5mm
+
+\definepapersize[mypaper][width=165mm, height=247.5mm]
+\setuppapersize[mypaper][mypaper]
 
 \setuplayout[
     grid=yes,
@@ -20,16 +29,16 @@
     topspace=\dimexpr(\paperheight/9)\relax,
     header=0\baselineskip,
     headerdistance=0\baselineskip,
-    height=\dimexpr(6\paperheight/9)+4\baselineskip\relax,
-    footerdistance=2\baselineskip,
+    height=\dimexpr\paperwidth+3\baselineskip\relax,
+    footerdistance=1\baselineskip,
     footer=2\lineheight,
    % INNER TO OUTER
-    backspace=\dimexpr(\paperwidth/9)\relax,% onesided
-    leftmargin=64pt,
-    leftmargindistance=9pt,
-    width=\dimexpr(6\paperwidth/9)\relax,
-    rightmargin=64pt,
-    rightmargindistance=16pt,
+    backspace=\dimexpr(\paperwidth/9)+5mm\relax,
+    leftmargin=0pt,
+    leftmargindistance=0pt,
+    width=26pc,
+    rightmargin=0pt,
+    rightmargindistance=0pt,
 ]
 
 \setuppagenumbering[location=, alternative=doublesided]

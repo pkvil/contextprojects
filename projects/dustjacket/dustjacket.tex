@@ -1,0 +1,50 @@
+\definepapersize[dustjacket][width=420mm, height=247mm]
+\setuppapersize[dustjacket][A3,landscape]
+
+\setuplayout[location=middle,
+  topspace=0mm,
+  header=0mm,
+  headerdistance=0mm,
+  backspace=0mm,
+  width=\paperwidth,
+  height=247mm,
+  footer=0mm,
+  footerdistance=0mm
+]
+
+\showframe
+
+% B A C K F L A P
+\definelayer[backflap]
+\setlayerframed[backflap][hoffset=0mm][width=50mm,height=247mm,align={top,right}]{
+\input knuth
+}
+
+% B A C K
+\definelayer[back]
+\setlayerframed[back][hoffset=50mm][width=150mm,height=247mm,align={top,right}]{
+\input zapf
+}
+
+% S P I N E
+\definelayer[spine]
+\setlayer[spine][hoffset=200mm]
+    {\pane[width=15mm,align={top,center}]{\rotate[rotation=270]{spine}}}
+
+% F R O N T
+\definelayer[front]
+\setlayer[front][hoffset=215mm]
+    {\pane[width=155mm]{front}}
+
+ 
+% F R O N T F L A P
+\definelayer[frontflap]
+\setlayer[frontflap][hoffset=370mm]
+    {\pane[width=5cm]{frontflap}}
+
+ 
+\setupbackgrounds[page][background={backflap,back,spine,front,frontflap}]
+
+\starttext
+\hbox{}
+\stoptext

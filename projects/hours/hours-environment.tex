@@ -1,0 +1,49 @@
+\startenvironment hours-environment
+
+\mainlanguage[en]
+
+\setupbodyfont[ajenson,12pt]
+%\definebodyfontenvironment[10pt][interlinespace=15pt]
+\definebodyfontenvironment[12pt][interlinespace=16pt]
+%39 lines
+\setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
+
+\definepapersize[sixnine][width=6in, height=9in]
+\setuppapersize[sixnine][sixnine]
+
+\def\bcor{0mm}
+
+\setuplayout[
+    grid=yes,
+    location={middle,left},
+   % TOP TO BOTTOM    
+    topspace=\dimexpr(\paperheight/9)\relax,
+    header=0\baselineskip,
+    headerdistance=0\baselineskip,
+    height=\dimexpr(6\paperheight/9)+4\baselineskip\relax,
+    footerdistance=2\baselineskip,
+    footer=2\lineheight,
+   % INNER TO OUTER
+    backspace=\dimexpr(\paperwidth/9)+\bcor\relax,% onesided
+    leftmargin=0pt,
+    leftmargindistance=0pt,
+    width=\dimexpr(6\paperwidth/9)\relax,
+    rightmargin=0pt,
+    rightmargindistance=0pt,
+]
+
+\setuppagenumbering[location=, alternative=doublesided]
+
+\setupfootertexts[]
+                 [\hfill \pagenumber\hfill]
+                 [\hfill \pagenumber\hfill]
+                 []
+
+
+\setupindenting[yes,medium] % indent paragraphs
+\setupspacing[packed] % French spacing
+
+%\showgrid
+
+
+\stopenvironment

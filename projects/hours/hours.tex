@@ -1,0 +1,22 @@
+\environment hours-environment
+
+\definelayer[mybg]	% name of the layer
+    [x=0mm, y=0mm,	% from upper left corner of paper
+     width=\paperwidth, height=\paperheight, % let the layer cover the full paper
+     ]
+
+\setlayer[mybg]	% name of the layer
+    [hoffset=0pt, voffset=0pt]  % placement (from upper left corner of the layer)
+    {\externalfigure[bentivoglio.jpg][height=7.5in]}  % the actual contents of the layer
+
+%\showgrid
+
+
+\starttext
+%\null
+%\page[yes]
+%\setupbackgrounds[page][background=mybg]
+\input knuth
+\input zapf
+%\noindent bone uoluntatis tue coronafti\hskip 3em nosRe
+\stoptext
