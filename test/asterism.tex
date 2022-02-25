@@ -1,0 +1,41 @@
+\setuppagenumbering[location=,]
+\setuplayout[grid=yes, width=5in,topspace=1in,header=0pt,headerdistance=0pt]
+
+\showgrid
+
+\def\asterism{%
+\hbox to \hsize{\hfil%
+  \hbox to 1em {\hss%
+    \hbox to 0em {\hss\raise 0.2ex \hbox{\smash{*}}\hss}%
+    \hbox to 0em {\hss\lower 0.8ex \hbox{\smash{**}}\hss}%
+  \hss}%
+\hfil}%
+}
+
+\starttext
+\starttyping
+\def\asterism{%
+\hbox to \hsize{\hfil%
+  \hbox to 1em {\hss%
+    \hbox to 0em {\hss\raise 0.2ex \hbox{\smash{*}}\hss}%
+    \hbox to 0em {\hss\lower 0.8ex \hbox{\smash{**}}\hss}%
+  \hss}%
+\hfil}%
+}
+
+\input zapf
+
+\asterism
+
+\input zapf
+\stoptyping
+
+\hrule\blank[line]
+
+\input zapf
+
+\blank[line]\asterism\blank[line]
+
+\input zapf
+
+\stoptext
