@@ -1,0 +1,49 @@
+\startenvironment thirty-environment
+
+%\mainlanguage[en]
+
+%\hyphenation{fring-illa}
+
+\setupbodyfont[arnopro,11pt] %26pc = 110mm
+\definebodyfontenvironment[11pt][interlinespace=15pt]
+%39 lines
+%\setupalign[hanging,hz] % microtypography, allow some stretching
+
+\definepapersize[phi][width=165mm, height=267mm]
+\setuppapersize[phi][phi]
+
+\setuplayout[
+    grid=yes,
+    marking=on,
+    location={middle,left},
+   % TOP TO BOTTOM    
+    topspace=\dimexpr(\paperwidth/9)\relax,
+    header=0\baselineskip,
+    headerdistance=0\baselineskip,
+    height=\dimexpr(205.7mm+3\baselineskip)\relax,
+    footerdistance=1\baselineskip,
+    footer=2\lineheight,
+   % INNER TO OUTER
+    backspace=\dimexpr(\paperwidth/9)\relax,% onesided
+    leftmargin=0pt,
+    leftmargindistance=0pt,
+    width=110mm,
+    rightmargin=67pt,
+    rightmargindistance=12pt,
+]
+
+\setuppagenumbering[location=, alternative=doublesided]
+
+\setupfootertexts[]
+                 [\pagenumber\quad]
+                 [\quad\pagenumber]
+                 []
+
+
+\setupindenting[yes,medium] % indent paragraphs
+\setupspacing[packed] % French spacing
+
+%\showgrid
+%\showframe
+
+\stopenvironment

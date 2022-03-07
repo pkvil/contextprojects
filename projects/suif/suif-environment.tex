@@ -2,29 +2,18 @@
 
 \mainlanguage[sv]
 
-\setupbodyfont[sabonnext,11pt]
-\definebodyfontenvironment[11pt][interlinespace=15pt]
+\setupbodyfont[sabonnext,10pt]
+\definebodyfontenvironment[10pt][interlinespace=14pt]
 %39 lines
-\setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
+\setupalign[hanging,hz] % microtypography, allow some stretching
 
-
-\newdimen\textareawidth \textareawidth=26pc
-\newdimen\textareaheight \textareaheight=1.5\textareawidth
-\newdimen\mypaperwidth \mypaperwidth=1.5\textareawidth
-\newdimen\mypaperheight \mypaperheight=1.5pc
-
-%11pt
-%26pc measure = 110mm
-%39pc paperwidth = 165mm
-%58.5pc paperheight = 247.5mm
-
-\definepapersize[mypaper][width=165mm, height=247.5mm]
-\setuppapersize[mypaper][mypaper]
+\definepapersize[mypaper][width=6in, height=9in]
+\setuppapersize[mypaper][A4]
 
 \setuplayout[
     grid=yes,
-    marking=yes,
-    location={middle,left,doublesided},
+    marking=on,
+    location={middle,left,duplex},
    % TOP TO BOTTOM    
     topspace=\dimexpr(\paperheight/9)\relax,
     header=0\baselineskip,
@@ -33,10 +22,10 @@
     footerdistance=1\baselineskip,
     footer=2\lineheight,
    % INNER TO OUTER
-    backspace=\dimexpr(\paperwidth/9)+5mm\relax,
+    backspace=\dimexpr(\paperwidth/9)+0mm\relax,
     leftmargin=0pt,
     leftmargindistance=0pt,
-    width=26pc,
+    width=24pc,
     rightmargin=0pt,
     rightmargindistance=0pt,
 ]
@@ -44,13 +33,35 @@
 \setuppagenumbering[location=, alternative=doublesided]
 
 \setupfootertexts[]
-                 [\hfill \pagenumber\hfill]
-                 [\hfill \pagenumber\hfill]
+                 [\hfill -\quad\pagenumber\quad-\hfill]
+                 [\hfill -\quad\pagenumber\quad-\hfill]
                  []
 
 
 \setupindenting[yes,medium] % indent paragraphs
 \setupspacing[packed] % French spacing
+
+\clubpenalty=0
+\widowpenalty=0
+
+% S
+
+\define[1]\dropcapS{%
+    \definefont[capfont][file:SabonNextLTPro-Display at 49pt]
+    \definefont[quotefont][Serif at 16pt]
+    \noindent\kern -0.16em
+    {\capfont S}
+    \vskip-3\baselineskip
+    \dimen1=2.5em
+    \dimen2=2.5em
+    \dimen3=2.5em
+    \parshape 4
+        \dimen1 \dimexpr\hsize-\dimen1
+        \dimen2 \dimexpr\hsize-\dimen2       
+        \dimen3 \dimexpr\hsize-\dimen3     
+        0pc \hsize                                   
+    \noindent{\spaceskip 0.3em \feature[-][liga]\kerncharacters[0.14]\sc #1\,}%            
+}
 
 %\showgrid
 

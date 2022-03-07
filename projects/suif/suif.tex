@@ -2,14 +2,24 @@
 
 \starttext
 
-\setbox0\hbox{x}
+%\setbox0\hbox{abcdefghijklmnopqrstuvwxyz}
+%\the\wd0
 
-\noindent\raise\ht0\hbox{\rlap{\blackrule[height=1pt,depth=1pt,width=5em]}}xxxxx
-fogligheten hos klostersystrar, som voro
+%\placeongrid{\noindent{\tfd\feature[+][ss06]a}\tfb~\kerncharacters[0.14]CHAPTER ONE}
+
+%\blank[2*line]
+
+    \definefont[myleaffont][file:SabonNextLTPro-Regular at 22pt]
+    \definefont[mychapfont][file:SabonNextLTPro-Display at 14pt]
+
+\placeongrid{\noindent{\setupbodyfont[18pt]\feature[+][ss06] a}\hskip0.8em \framed[frame=off,location=top,align={flushleft,nothyphenated}]{\mychapfont \spaceskip0.33em \kerncharacters[0.14]MEGAN IS THE CUTEST GIRL\blank[line] IN THE WORLD, AND I LOVE \blank[line]  HER SO MUCH}}
+\blank[2*line]
+
+\dropcapS{å börjar historien} om fogligheten hos de klostersystrar som voro
 vana vid underkastelse. Sedan visade
-sig greven och grevinnan, följda av
-manufakturhandlaren och hans hustru,
-sedan Loiseau, som sköt sin stora fru
+sig greven och även grevinnan, följda av
+manufakturhandlaren och hans fru,
+sedan Loiseau, som sköt sin stora hustru
 framför sig. Då han satte foten på marken
 sade han till officeraren ett: ”God
 dag, min herre!” Det var snarare en försiktighet
