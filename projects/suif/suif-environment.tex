@@ -1,26 +1,27 @@
 \startenvironment suif-environment
 
-\mainlanguage[sv]
+\mainlanguage[en]
 
-\setupbodyfont[sabonnext,10pt]
-\definebodyfontenvironment[10pt][interlinespace=14pt]
+\setupbodyfont[arnopro,11pt]
+\definebodyfontenvironment[11pt][interlinespace=12pt]
+\definebodyfontenvironment[15pt][interlinespace=30pt]
 %39 lines
 \setupalign[hanging,hz] % microtypography, allow some stretching
 
 \definepapersize[mypaper][width=6in, height=9in]
-\setuppapersize[mypaper][A4]
+\setuppapersize[mypaper][mypaper]
 
 \setuplayout[
     grid=yes,
     marking=on,
-    location={middle,left,duplex},
+    location={middle,left,doublesided},
    % TOP TO BOTTOM    
     topspace=\dimexpr(\paperheight/9)\relax,
     header=0\baselineskip,
     headerdistance=0\baselineskip,
-    height=\dimexpr\paperwidth+3\baselineskip\relax,
+    height=\dimexpr\paperwidth+2\baselineskip\relax,
     footerdistance=1\baselineskip,
-    footer=2\lineheight,
+    footer=1\lineheight,
    % INNER TO OUTER
     backspace=\dimexpr(\paperwidth/9)+0mm\relax,
     leftmargin=0pt,
@@ -33,36 +34,60 @@
 \setuppagenumbering[location=, alternative=doublesided]
 
 \setupfootertexts[]
-                 [\hfill -\quad\pagenumber\quad-\hfill]
-                 [\hfill -\quad\pagenumber\quad-\hfill]
+                 [\hfill\pagenumber\hskip\dimexpr\wd\aldusbox+4pt]
+                 [\hskip\dimexpr\wd\aldusbox+4pt\pagenumber\hfill]
                  []
 
 
-\setupindenting[yes,medium] % indent paragraphs
+\setupindenting[yes,small] % indent paragraphs
 \setupspacing[packed] % French spacing
 
 \clubpenalty=0
 \widowpenalty=0
 
+%%% CHAPTER STUFF
+
+\definefontsynonym[duffnereb][file:EBGaramond12-Regular]
+\definesymbol[aldusleaf][\getglyph{duffnereb}{\char"2767}]
+
+\newbox\aldusbox \setbox\aldusbox=\hbox{\scale[xscale=1500,yscale=1500]{\symbol[aldusleaf]}}
+
+\defineframed
+  [chaptitframe]
+  [offset=none,frame=off,align=normal,location=high]
+
+\setuphead[chapter][page=no,placehead=no]
+
+\define[2]\mychapter{%
+\page[right]%
+\noindent\hbox to \hsize{%
+    \rlap{\chaptitframe{\copy\aldusbox}}%
+    \chaptitframe[width=local,loffset=\dimexpr\wd\aldusbox+4pt]{%
+        \setupbodyfont[12pt]\spaceskip=0.32em plus 0.2em minus 0.1em\kerncharacters[0.12]#2
+    }
+}\chapter[#1]{#1}\blank[2*line]}
+
+
 % S
 
 \define[1]\dropcapS{%
-    \definefont[capfont][file:SabonNextLTPro-Display at 49pt]
+    \definefont[capfont][file:ArnoPro-LightDisplay at 47pt]
     \definefont[quotefont][Serif at 16pt]
-    \noindent\kern -0.16em
+    \noindent\kern -0em
     {\capfont S}
     \vskip-3\baselineskip
-    \dimen1=2.5em
-    \dimen2=2.5em
-    \dimen3=2.5em
+    \dimen1=1.95em
+    \dimen2=2.2em
+    \dimen3=2.2em
     \parshape 4
         \dimen1 \dimexpr\hsize-\dimen1
         \dimen2 \dimexpr\hsize-\dimen2       
         \dimen3 \dimexpr\hsize-\dimen3     
         0pc \hsize                                   
-    \noindent{\spaceskip 0.3em \feature[-][liga]\kerncharacters[0.14]\sc #1\,}%            
+    \noindent{\spaceskip 0.3em \feature[-][liga]\kerncharacters[0.1]\sc #1\,}%            
 }
 
 %\showgrid
+%\showboxes
 
 \stopenvironment

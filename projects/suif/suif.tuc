@@ -78,6 +78,14 @@ if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.sections then utilitydata.structures.sections = { } end
 
 utilitydata.structures.sections.collected={
+ {
+  ["block"]="bodypart",
+  ["conversionset"]="default",
+  ["language"]="en",
+  ["numbers"]=1,
+  ["separatorset"]="default",
+  ["set"]="all",
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -85,7 +93,7 @@ if not utilitydata.structures.counters then utilitydata.structures.counters = { 
 
 utilitydata.structures.counters.collected={
  ["chemical"]={
-  { 0 },
+  { 0, 0 },
  },
  ["combination"]={
   { 0 },
@@ -94,46 +102,46 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["figure"]={
-  { 0 },
+  { 0, 0 },
  },
  ["footnote"]={
   { 0 },
  },
  ["formula"]={
-  { 0 },
+  { 0, 0 },
  },
  ["graphic"]={
-  { 0 },
+  { 0, 0 },
  },
  ["intermezzo"]={
-  { 0 },
+  { 0, 0 },
  },
  ["itemgroup:itemize"]={
-  { 0 },
+  { 0, 0 },
  },
  ["itemgroup:itemize:note"]={
-  { 0 },
+  { 0, 0 },
  },
  ["linenote"]={
   { 0 },
  },
  ["paragraph"]={
-  { 0 },
+  { 0, 0 },
  },
  ["realpage"]={
-  { 6 },
+  { 2 },
  },
  ["subpage"]={
-  { 6 },
+  { 2 },
  },
  ["table"]={
-  { 0 },
+  { 0, 0 },
  },
  ["textnote:note"]={
   { 0 },
  },
  ["userpage"]={
-  { 6 },
+  { 2 },
  },
 }
 
@@ -141,6 +149,19 @@ if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
 
 utilitydata.structures.lists.collected={
+ {
+  ["metadata"]=2,
+  ["numberdata"]=3,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=1,
+   ["realpage"]=1,
+   ["section"]=1,
+  },
+  ["titledata"]={
+   ["label"]="chapter",
+  },
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -150,43 +171,15 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=1,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
+  ["numberdata"]=4,
+  ["prefixdata"]=5,
   ["state"]="start",
  },
  {
   ["block"]="bodypart",
   ["number"]=2,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=3,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=4,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=5,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=6,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
+  ["numberdata"]=4,
+  ["prefixdata"]=5,
   ["state"]="start",
  },
 }
@@ -258,6 +251,23 @@ utilitydata.job.embedded.collected={
 
 utilitydata.job.packed={
  ["index"]={
+  { 0, 1 },
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["increment"]="yes",
+   ["kind"]="section",
+   ["level"]=2,
+   ["name"]="chapter",
+  },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["language"]="en",
+   ["numbers"]=1,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
   {
    ["conversionset"]="pagenumber",
   },
