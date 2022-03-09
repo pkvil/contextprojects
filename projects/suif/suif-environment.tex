@@ -2,8 +2,8 @@
 
 \mainlanguage[en]
 
-\setupbodyfont[arnopro,11pt]
-\definebodyfontenvironment[11pt][interlinespace=12pt]
+\setupbodyfont[arnopro,12pt]
+\definebodyfontenvironment[12pt][interlinespace=15pt]
 \definebodyfontenvironment[15pt][interlinespace=30pt]
 %39 lines
 \setupalign[hanging,hz] % microtypography, allow some stretching
@@ -19,9 +19,9 @@
     topspace=\dimexpr(\paperheight/9)\relax,
     header=0\baselineskip,
     headerdistance=0\baselineskip,
-    height=\dimexpr\paperwidth+2\baselineskip\relax,
-    footerdistance=1\baselineskip,
-    footer=1\lineheight,
+    height=\dimexpr\paperwidth+3\baselineskip\relax,
+    footerdistance=0\baselineskip,
+    footer=3\lineheight,
    % INNER TO OUTER
     backspace=\dimexpr(\paperwidth/9)+0mm\relax,
     leftmargin=0pt,
@@ -34,10 +34,11 @@
 \setuppagenumbering[location=, alternative=doublesided]
 
 \setupfootertexts[]
-                 [\hfill\pagenumber\hskip\dimexpr\wd\aldusbox+4pt]
-                 [\hskip\dimexpr\wd\aldusbox+4pt\pagenumber\hfill]
+                 [\pagenumber\quad]
+                 [\quad\pagenumber]
                  []
 
+%\adaptlayout[1][lines=+1]
 
 \setupindenting[yes,small] % indent paragraphs
 \setupspacing[packed] % French spacing
@@ -63,7 +64,7 @@
 \noindent\hbox to \hsize{%
     \rlap{\chaptitframe{\copy\aldusbox}}%
     \chaptitframe[width=local,loffset=\dimexpr\wd\aldusbox+4pt]{%
-        \setupbodyfont[12pt]\spaceskip=0.32em plus 0.2em minus 0.1em\kerncharacters[0.12]#2
+        \setupbodyfont[14pt]\spaceskip=0.32em plus 0.2em minus 0.1em\kerncharacters[0.12]#2
     }
 }\chapter[#1]{#1}\blank[2*line]}
 
@@ -71,14 +72,14 @@
 % S
 
 \define[1]\dropcapS{%
-    \definefont[capfont][file:ArnoPro-LightDisplay at 47pt]
+    \definefont[capfont][file:ArnoPro-Display at 56pt]
     \definefont[quotefont][Serif at 16pt]
     \noindent\kern -0em
     {\capfont S}
     \vskip-3\baselineskip
-    \dimen1=1.95em
-    \dimen2=2.2em
-    \dimen3=2.2em
+    \dimen1=2.1em
+    \dimen2=2.3em
+    \dimen3=2.3em
     \parshape 4
         \dimen1 \dimexpr\hsize-\dimen1
         \dimen2 \dimexpr\hsize-\dimen2       
