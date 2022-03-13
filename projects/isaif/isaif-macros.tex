@@ -1,0 +1,114 @@
+\mainlanguage[en]
+
+%%
+%% F O N T S
+%%
+
+\setupbodyfont[ajenson,11pt]
+\feature[+][tlig]
+\definebodyfontenvironment[11pt][interlinespace=13pt]
+
+%%
+%% C O L O R S
+%%
+
+\definecolor[myred][x=C80E0E]
+\definecolor[myblue][x=2A4AA7]
+
+%%
+%% P A P E R   A N D   P A G E   S I Z E
+%%
+
+\definepapersize[sixnine][width=6in,height=9in]
+\setuppapersize[sixnine][sixnine]
+
+%%
+%% P A G E   L A Y O U T
+%%
+
+\setuplayout[
+    grid=yes,
+    marking=on,
+    location={middle,left,doublesided},
+   % TOP TO BOTTOM    
+    topspace=\dimexpr(\paperheight/9)\relax,
+    header=0\baselineskip,
+    headerdistance=0\baselineskip,
+    height=\dimexpr\paperwidth+3\baselineskip\relax,
+    footerdistance=0\baselineskip,
+    footer=3\lineheight,
+   % INNER TO OUTER
+    backspace=\dimexpr(\paperwidth/9)+0mm\relax,
+    leftmargin=20pt,
+    leftmargindistance=0.5em,
+    width=24pc,
+    rightmargin=70pt,
+    rightmargindistance=0.5em,
+]
+
+%%
+%% S E C T I O N I N G
+%%
+
+% FRONTMATTER
+
+\startsectionblockenvironment[frontpart]
+  %\setcounter[userpage][1]
+  %\setupuserpagenumber [numberconversion=romannumerals]
+
+  \setupheadertexts[][][][]
+
+  \setupfootertexts[\hfill \pagenumber \hfill] % recto outer
+                   [] % recto inner
+                   [] % verso inner
+                   [\hfill \pagenumber \hfill] % verso outer
+\stopsectionblockenvironment
+
+% BODYMATTER
+
+\startsectionblockenvironment[bodypart]
+  \setcounter[userpage][1]    
+
+  \setupheadertexts[][][][]
+
+  \setupfootertexts[\hfill \pagenumber \hfill] % recto outer
+                   [] % recto inner
+                   [] % verso inner
+                   [\hfill \pagenumber \hfill] % verso outer
+\stopsectionblockenvironment
+
+
+% CHAPTER
+
+
+
+\setupmargindata[inouter][style=\tf]
+\setupmargindata[inleft][style=\tf]
+
+\setuppagenumbering[alternative=doublesided, location=,]
+
+\setuphead[chapter]
+          [page=no,
+           number=no,
+           before={\blank[line]},
+           after={\blank[line]},
+           style=\tf,
+           textcommand={\spaceskip 0.3em plus 0.2em minus 0.1em \kerncharacters[0.12]},
+           deeptextcommand=\WORD,
+           align={flushleft,nothyphenated},
+          ]
+
+%%
+%% P A R A G R A P H
+%%
+
+\setupindenting[yes,small] % indent paragraphs
+%\setupwhitespace[no] % whitespace between paragraphs
+
+\setupspacing[packed] % French spacing
+
+\setupitaliccorrection[text]
+
+\define[1]\paragraphnumber{\inleft{#1}}
+
+%\showgrid

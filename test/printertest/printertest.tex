@@ -1,0 +1,38 @@
+\setuppapersize[A5][A4]
+
+\setupbodyfont[pagella,12pt]
+\definebodyfontenvironment[12pt][interlinespace=1cm]
+
+\setuplayout[
+    grid=yes,
+    marking=on,
+    location={middle,middle},
+   % TOP TO BOTTOM    
+    topspace=25mm,
+    header=0pt,
+    headerdistance=0pt,
+    height=middle,
+    footerdistance=0pt,
+    footer=0pt,
+   % INNER TO OUTER
+    backspace=24.25mm,
+    leftmargin=0pt,
+    leftmargindistance=0pt,
+    width=middle,
+    rightmargin=0pt,
+    rightmargindistance=0pt,
+]
+
+
+\showgrid
+
+\starttext
+\tolerance=500
+Printer test time.\
+12pt font on 1cm baseline distance, measure = 10cm.
+\blank[line]
+Sample text:\par
+\input zapf
+\input zapf
+
+\stoptext
