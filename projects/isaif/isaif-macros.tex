@@ -4,9 +4,9 @@
 %% F O N T S
 %%
 
-\setupbodyfont[ajenson,11pt]
+\setupbodyfont[ajenson,13pt]
 \feature[+][tlig]
-\definebodyfontenvironment[11pt][interlinespace=13pt]
+\definebodyfontenvironment[13pt][interlinespace=15pt]
 
 %%
 %% C O L O R S
@@ -35,16 +35,18 @@
     header=0\baselineskip,
     headerdistance=0\baselineskip,
     height=\dimexpr\paperwidth+3\baselineskip\relax,
-    footerdistance=0\baselineskip,
-    footer=3\lineheight,
+    footerdistance=\baselineskip,
+    footer=2\baselineskip,
    % INNER TO OUTER
     backspace=\dimexpr(\paperwidth/9)+0mm\relax,
-    leftmargin=20pt,
-    leftmargindistance=0.5em,
+    leftmargin=6em,
+    leftmargindistance=1.2em,
     width=24pc,
-    rightmargin=70pt,
-    rightmargindistance=0.5em,
+    rightmargin=6em,
+    rightmargindistance=1.2em,
 ]
+
+%\adaptlayout[1][lines=+1]
 
 %%
 %% S E C T I O N I N G
@@ -58,7 +60,7 @@
 
   \setupheadertexts[][][][]
 
-  \setupfootertexts[\hfill \pagenumber \hfill] % recto outer
+  \setupfootertexts[\pagenumber] % recto outer
                    [] % recto inner
                    [] % verso inner
                    [\hfill \pagenumber \hfill] % verso outer
@@ -66,24 +68,26 @@
 
 % BODYMATTER
 
+\startsetups[myfooter]
+{\quad\inframed[frame=off,height=\footerheight,align=high,location=depth]{\pagenumber}}\quad
+\stopsetups
+
 \startsectionblockenvironment[bodypart]
   \setcounter[userpage][1]    
 
   \setupheadertexts[][][][]
 
-  \setupfootertexts[\hfill \pagenumber \hfill] % recto outer
-                   [] % recto inner
+  \setupfootertexts[] % recto inner
+                   []%[\setups{myfooter}] % recto outer1
+                   []%[\setups{myfooter}] % verso outer
                    [] % verso inner
-                   [\hfill \pagenumber \hfill] % verso outer
 \stopsectionblockenvironment
 
 
 % CHAPTER
 
-
-
 \setupmargindata[inouter][style=\tf]
-\setupmargindata[inleft][style=\tf]
+\setupmargindata[inleft][style=\tf,]
 
 \setuppagenumbering[alternative=doublesided, location=,]
 
@@ -93,7 +97,8 @@
            before={\blank[line]},
            after={\blank[line]},
            style=\tf,
-           textcommand={\spaceskip 0.3em plus 0.2em minus 0.1em \kerncharacters[0.12]},
+           textcolor=myred,
+           textcommand={\spaceskip 0.35em minus 0.1em \kerncharacters[0.12]},
            deeptextcommand=\WORD,
            align={flushleft,nothyphenated},
           ]
@@ -102,13 +107,25 @@
 %% P A R A G R A P H
 %%
 
-\setupindenting[yes,small] % indent paragraphs
+\setupalign[hz,hanging]
+
+\orphanpenalty=0 \widowpenalty=0
+
+\setupindenting[no,1em]
+
 %\setupwhitespace[no] % whitespace between paragraphs
 
 \setupspacing[packed] % French spacing
 
 \setupitaliccorrection[text]
 
-\define[1]\paragraphnumber{\inleft{#1}}
+\define[1]\paragraphnumber{\color[black]{¶}\inouter{\color[black]{#1}}}
+%\define[1]\paragraphnumber{#1.~}
+%\lesshyphens
+%\doublehyphendemerits=10000
+%\tolerance=500
+\hyphenpenalty=100
+\emergencystretch=8pt
 
 %\showgrid
+%\showframe

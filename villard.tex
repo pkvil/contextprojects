@@ -1,0 +1,36 @@
+\startuseMPgraphic{page}
+StartPage ;
+pickup pensquare scaled 0.2pt ;
+draw (0in,1in)--(6in,1in) withcolor black;
+draw (0in,2in)--(6in,2in) withcolor black;
+draw (0in,3in)--(6in,3in) withcolor black;
+draw (0in,4in)--(6in,4in) withcolor black;
+draw (0in,5in)--(6in,5in) withcolor black;
+draw (0in,6in)--(6in,6in) withcolor black;
+draw (0in,7in)--(6in,7in) withcolor black;
+draw (0in,8in)--(6in,8in) withcolor black;
+
+draw (0.666in,0in)--(0.666in,9in) withcolor black;
+draw (1.333in,0in)--(1.333in,9in) withcolor black;
+draw (2in,0in)--(2in,9in) withcolor black;
+draw (2.666in,0in)--(2.666in,9in) withcolor black;
+draw (3.333in,0in)--(3.333in,9in) withcolor black;
+draw (4in,0in)--(4in,9in) withcolor black;
+draw (4.666in,0in)--(4.666in,9in) withcolor black;
+draw (5.333in,0in)--(5.333in,9in) withcolor black;
+
+pickup pensquare scaled 0.4pt ;
+%fill Page withcolor .625white ;
+%fill Field[OuterMargin][Text] withcolor .850white ;
+%fill Field[Text] [Text] withcolor .850white ;
+%draw Field[OuterMargin][Text] withcolor .625red ;
+draw Field[Text] [Text] withcolor black ;
+StopPage ;
+\stopuseMPgraphic
+
+\defineoverlay[page][\useMPgraphic{page}]
+%\setupbackgrounds[page][background=page]
+
+\starttext
+test
+\stoptext
