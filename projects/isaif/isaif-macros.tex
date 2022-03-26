@@ -12,8 +12,13 @@
 %% C O L O R S
 %%
 
-\definecolor[myred][x=C80E0E]
+\definecolor[myred][x=f2390b]
+%\definecolor[myred][x=e82e00]
+%\definecolor[myred][x=de2200]
+\definecolor[vermillion][x=E34234]
+%\definecolor[vermillion][x=b84048]
 \definecolor[myblue][x=2A4AA7]
+\definecolor[offwhite][x=f9f5f0]
 
 %%
 %% P A P E R   A N D   P A G E   S I Z E
@@ -21,6 +26,8 @@
 
 \definepapersize[sixnine][width=6in,height=9in]
 \setuppapersize[sixnine][sixnine]
+
+%\setupbackgrounds[page][background=color,backgroundcolor=offwhite]
 
 %%
 %% P A G E   L A Y O U T
@@ -46,7 +53,7 @@
     rightmargindistance=1.2em,
 ]
 
-%\adaptlayout[1][lines=+1]
+\adaptlayout[1][lines=+1]
 
 %%
 %% S E C T I O N I N G
@@ -58,12 +65,12 @@
   %\setcounter[userpage][1]
   %\setupuserpagenumber [numberconversion=romannumerals]
 
-  \setupheadertexts[][][][]
+%  \setupheadertexts[][][][]
 
-  \setupfootertexts[\pagenumber] % recto outer
-                   [] % recto inner
-                   [] % verso inner
-                   [\hfill \pagenumber \hfill] % verso outer
+%  \setupfootertexts[\pagenumber] % recto outer
+%                   [] % recto inner
+%                   [] % verso inner
+%                   [\hfill \pagenumber \hfill] % verso outer
 \stopsectionblockenvironment
 
 % BODYMATTER
@@ -97,7 +104,7 @@
            before={\blank[line]},
            after={\blank[line]},
            style=\tf,
-           textcolor=myred,
+           textcolor=vermillion,
            textcommand={\spaceskip 0.35em minus 0.1em \kerncharacters[0.12]},
            deeptextcommand=\WORD,
            align={flushleft,nothyphenated},
@@ -111,7 +118,7 @@
 
 \orphanpenalty=0 \widowpenalty=0
 
-\setupindenting[no,1em]
+\setupindenting[no,1.5em]
 
 %\setupwhitespace[no] % whitespace between paragraphs
 
@@ -119,13 +126,23 @@
 
 \setupitaliccorrection[text]
 
-\define[1]\paragraphnumber{\color[black]{¶}\inouter{\color[black]{#1}}}
-%\define[1]\paragraphnumber{#1.~}
+%\define[1]\paragraphnumber{\color[black]{¶}\inouter{\color[black]{#1}}}
+%\define[1]\paragraphnumber{\inouter{\color[black]{#1}}}
+\define[1]\paragraphnumber{\thinspace\color[vermillion]{¶#1}\thinspace}
+%\define[1]\paragraphnumber{\thinspace\color[vermillion]{¶\inouter{\color[vermillion]{#1}}}}
 %\lesshyphens
 %\doublehyphendemerits=10000
 %\tolerance=500
 \hyphenpenalty=100
 \emergencystretch=8pt
+
+%%
+%% ToC
+%%
+
+\define[1]\myparagraphref{%
+\quad{\it\color[black]{#1}}
+}
 
 %\showgrid
 %\showframe
