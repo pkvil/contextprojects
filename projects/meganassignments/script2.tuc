@@ -55,15 +55,9 @@ if not utilitydata.job.passes then utilitydata.job.passes = { } end
 
 utilitydata.job.passes.collected={
  ["itemgroup:itemize:1"]={
-  { 9, 0 },
   { 2, 0 },
-  { 1, 0 },
  },
  ["itemgroup:itemize:2"]={
-  { 4, 0 },
- },
- ["itemgroup:itemize:3"]={
-  { 1, 0 },
   { 1, 0 },
  },
 }
@@ -121,9 +115,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["itemgroup:itemize"]={
-  { 0, 9, 4, 1 },
-  { 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-  { 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+  { 0, 2, 1 },
  },
  ["itemgroup:itemize:note"]={
   { 0 },
@@ -135,10 +127,10 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["realpage"]={
-  { 2 },
+  { 1 },
  },
  ["subpage"]={
-  { 2 },
+  { 1 },
  },
  ["table"]={
   { 0 },
@@ -147,7 +139,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 2 },
+  { 1 },
  },
 }
 
@@ -164,13 +156,6 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=1,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=2,
   ["numberdata"]=1,
   ["prefixdata"]=2,
   ["state"]="start",
