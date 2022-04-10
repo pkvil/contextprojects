@@ -4,16 +4,17 @@
 %% F O N T S
 %%
 
-\setupbodyfont[ajenson,13pt]
+\setupbodyfont[ajenson,12pt]
 \feature[+][tlig]
 \definebodyfontenvironment[13pt][interlinespace=15pt]
+\definebodyfontenvironment[12pt][interlinespace=14.5pt]
 
 %%
 %% C O L O R S
 %%
 
-\definecolor[myred][x=f2390b]
-%\definecolor[myred][x=e82e00]
+%\definecolor[myred][x=f2390b]
+\definecolor[myred][x=e82e00]
 %\definecolor[myred][x=de2200]
 \definecolor[vermillion][x=E34234]
 %\definecolor[vermillion][x=b84048]
@@ -25,7 +26,7 @@
 %%
 
 \definepapersize[sixnine][width=6in,height=9in]
-\setuppapersize[sixnine][sixnine]
+\setuppapersize[sixnine][A4]
 
 %\setupbackgrounds[page][background=color,backgroundcolor=offwhite]
 
@@ -47,13 +48,33 @@
    % INNER TO OUTER
     backspace=\dimexpr(\paperwidth/9)+0mm\relax,
     leftmargin=6em,
-    leftmargindistance=1.2em,
-    width=24pc,
+    leftmargindistance=10pt,
+    width=\dimexpr(24pc+0mm),
     rightmargin=6em,
-    rightmargindistance=1.2em,
+    rightmargindistance=10pt,
 ]
 
-\adaptlayout[1][lines=+1]
+\adaptlayout[6][lines=+1]
+\adaptlayout[7][lines=+1]
+\adaptlayout[10][lines=+1]
+\adaptlayout[11][lines=+1]
+\adaptlayout[12][lines=+1]
+\adaptlayout[13][lines=+1]
+\adaptlayout[20][lines=+1]
+\adaptlayout[21][lines=+1]
+\adaptlayout[24][lines=+1]
+\adaptlayout[25][lines=+1]
+\adaptlayout[42][lines=+1]
+\adaptlayout[43][lines=+1]
+\adaptlayout[44][lines=+1]
+\adaptlayout[45][lines=+1]
+\adaptlayout[88][lines=+1]
+\adaptlayout[89][lines=+1]
+\adaptlayout[106][lines=-1]
+\adaptlayout[112][lines=+1]
+\adaptlayout[113][lines=+1]
+\adaptlayout[116][lines=-1]
+\adaptlayout[117][lines=-1]
 
 %%
 %% S E C T I O N I N G
@@ -93,22 +114,26 @@
 
 % CHAPTER
 
-\setupmargindata[inouter][style=\tf]
+\setupmargindata[inouter][style={\tfx\feature[+][lnum]},color=myred]
 \setupmargindata[inleft][style=\tf,]
 
 \setuppagenumbering[alternative=doublesided, location=,]
 
+
 \setuphead[chapter]
           [page=no,
+           interlinespace=14.5pt,
            number=no,
            before={\blank[line]},
            after={\blank[line]},
            style=\tf,
-           textcolor=vermillion,
+           textcolor=myred,
            textcommand={\spaceskip 0.35em minus 0.1em \kerncharacters[0.12]},
            deeptextcommand=\WORD,
-           align={flushleft,nothyphenated},
+           align={right},
           ]
+
+
 
 %%
 %% P A R A G R A P H
@@ -118,31 +143,33 @@
 
 \orphanpenalty=0 \widowpenalty=0
 
-\setupindenting[no,1.5em]
+\setupindenting[yes,0em]
 
 %\setupwhitespace[no] % whitespace between paragraphs
 
-\setupspacing[packed] % French spacing
+\setupspacing[broad] % French spacing
 
 \setupitaliccorrection[text]
 
-%\define[1]\paragraphnumber{\color[black]{¶}\inouter{\color[black]{#1}}}
-%\define[1]\paragraphnumber{\inouter{\color[black]{#1}}}
-\define[1]\paragraphnumber{\thinspace\color[vermillion]{¶#1}\thinspace}
+%\define[1]\paragraphnumber{\color[vermillion]{#1.~}}
+%\define[1]\paragraphnumber{\inouter{\color[vermillion]{#1}}}
+%\define[1]\paragraphnumber{\color[vermillion]{¶\feature[+][lnum]#1}\kern0.333em}
 %\define[1]\paragraphnumber{\thinspace\color[vermillion]{¶\inouter{\color[vermillion]{#1}}}}
+\define[1]\paragraphnumber{\color[black]{¶}\inouter{#1}}
+%\define[1]\paragraphnumber{\color[vermillion]{¶}\color[vermillion]{#1}}
 %\lesshyphens
 %\doublehyphendemerits=10000
 %\tolerance=500
-\hyphenpenalty=100
-\emergencystretch=8pt
+%\hyphenpenalty=100
+%\emergencystretch=8pt
+%\tolerance=200
 
 %%
 %% ToC
 %%
 
-\define[1]\myparagraphref{%
-\quad{\it\color[black]{#1}}
-}
 
+
+%\showboxes
 %\showgrid
 %\showframe

@@ -1,58 +1,76 @@
 \page[right]
 \chapter{Contents}
-\def\contentitemspacing{15pt}
-Introduction\myparagraphref{1}
-\blank[\contentitemspacing]
-The psychology of modern leftism\myparagraphref{5}
-\blank[\contentitemspacing]
-Feelings of inferiority\myparagraphref{14}
-\blank[\contentitemspacing]
-Oversocialization
-\blank[\contentitemspacing]
-The power process
-\blank[\contentitemspacing]
-Surrogate activities
-\blank[\contentitemspacing]
-Autonomy
-\blank[\contentitemspacing]
-Sources of social problems
-\blank[\contentitemspacing]
-Disruption of the power process\par in modern society\myparagraphref{17}
-\blank[\contentitemspacing]
-How some people adjust
-\blank[\contentitemspacing]
-The motives of scientists
-\blank[\contentitemspacing]
-The nature of freedom
-\blank[\contentitemspacing]
-Some principles of history
-\blank[\contentitemspacing]
-Industrial-technological society\par cannot be reformed
-\blank[\contentitemspacing]
-Restriction of freedom is unavoidable\par in industrial society
-\blank[\contentitemspacing]
-The ‘bad’ parts of technology cannot\par be separated from the ‘good’ parts
-\blank[\contentitemspacing]
-Technology is a more powerful social\par force than the aspiration for freedom
-\blank[\contentitemspacing]
-Simpler social problems have proved\par intractable
-\blank[\contentitemspacing]
-Revolution is easier than reform
-\blank[\contentitemspacing]
-Control of human behavior
-\blank[\contentitemspacing]
-Human race at a crossroads
-\blank[\contentitemspacing]
-Human suffering
-\blank[\contentitemspacing]
-The future
-\blank[\contentitemspacing]
-Strategy
-\blank[\contentitemspacing]
-Two kinds of technology
-\blank[\contentitemspacing]
-The danger of leftism
-\blank[\contentitemspacing]
-Final note
-\blank[\contentitemspacing]
-Endnotes
+
+%\def\contentitemspacing{15pt}
+\start
+%\setupbodyfont[13pt]
+\setupalign[right,nothyphenated]
+\setupwhitespace[line]
+\setupnarrower[left=27pt]%
+\startnarrower[left]%
+\setupindenting[-\leftskip,yes,first]%
+%\define[1]\myparagraphref{\dontleavehmode\hbox to 3em{\hfil%
+%{\it\color[vermillion]{¶\feature[+][pnum]\feature[+][lnum]#1}}}
+%}
+
+\define[1]\myparagraphref{\dontleavehmode{\feature[+][pnum]\feature[+][lnum]\inframed[align=left,width=27pt,frame=off]{\tfx¶\color[myred]{#1}\enspace}}}
+
+
+\tf
+\myparagraphref{1}Introduction
+
+\myparagraphref{6}The psychology of modern leftism
+
+\myparagraphref{10}Feelings of inferiority
+
+\myparagraphref{24}Oversocialization
+
+\myparagraphref{33}The power process
+
+\myparagraphref{38}Surrogate activities
+
+\myparagraphref{42}Autonomy
+
+\myparagraphref{45}Sources of social problems
+
+\myparagraphref{59}Disruption of the power process in modern society
+
+\myparagraphref{77}How some people adjust
+
+\myparagraphref{87}The motives of scientists
+
+\myparagraphref{93}The nature of freedom
+
+\myparagraphref{99}Some principles of history
+
+\myparagraphref{111}Industrial-technological society cannot be reformed
+
+\myparagraphref{114}Restriction of freedom is unavoidable in\break industrial society
+
+\myparagraphref{121}The ‘bad’ parts of technology cannot be separated\break from the ‘good’ parts
+
+\myparagraphref{125}Technology is a more powerful social force than\break the aspiration for freedom
+
+\myparagraphref{136}Simpler social problems have proved intractable
+
+\myparagraphref{140}Revolution is easier than reform
+
+\myparagraphref{143}Control of human behavior
+
+\myparagraphref{161}Human race at a crossroads
+
+\myparagraphref{167}Human suffering
+
+\myparagraphref{171}The future
+
+\myparagraphref{180}Strategy
+
+\myparagraphref{207}Two kinds of technology
+
+\myparagraphref{213}The danger of leftism
+
+\myparagraphref{231}Final note
+
+\dontleavehmode\hbox to 27pt{}Endnotes
+\stopnarrower
+\stop
