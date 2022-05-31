@@ -1,0 +1,43 @@
+\definefontfeature
+  [coelacanth-normal]
+  [default]
+  [mode=node,ccmp=yes,calt=no,
+   liga=yes,dlig=yes,hlig=yes,
+   kern=yes,mark=yes,mkmk=yes,
+   onum=yes,pnum=no,salt=no,
+   script=latn]
+
+\definefontfeature
+  [coelacanth-smallcaps]
+  [coelacanth-normal]
+  [smcp=yes,c2sc=no]
+
+\definefontfeature[smcp][smcp=yes]
+\definefontfeature[c2sc][c2sc=yes]
+\definefontfeature[lnum][lnum=yes]
+\definefontfeature[onum][onum=yes]
+\definefontfeature[pnum][pnum=yes]
+\definefontfeature[tnum][tnum=yes]
+\definefontfeature[sinf][sinf=yes]
+\definefontfeature[ss02][ss02=yes]
+\definefontfeature[sups][sups=yes]
+\definefontfeature[swsh][swsh=yes]
+
+\starttypescriptcollection[coelacanth]
+
+\starttypescript [serif] [coelacanth]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:Coelacanth]          [features=coelacanth-normal]
+       \definefontsynonym [SerifItalic]     [file:CoelacanthItalic]    [features=coelacanth-normal]
+       \definefontsynonym [SerifBold]       [file:CoelacanthBold]      [features=coelacanth-normal]
+       \definefontsynonym [SerifSlanted]    [file:CoelacanthItalic]    [features=coelacanth-normal]
+       \definefontsynonym [SerifBoldItalic] [file:CoelacanthItalic]    [features=coelacanth-normal]
+       \definefontsynonym [SerifBoldSlanted][file:CoelacanthItalic]    [features=coelacanth-normal]
+       \definefontsynonym [SerifCaps]       [Serif]                    [features=coelacanth-smallcaps]
+\stoptypescript
+
+\starttypescript[coelacanth]
+     \definetypeface [coelacanth] [rm] [serif] [coelacanth] [default]
+\stoptypescript
+
+\stoptypescriptcollection

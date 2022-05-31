@@ -1,0 +1,23 @@
+\definefontfeature
+  [unifrakturmaguntia-normal]
+  [default]
+  [onum=yes,pnum=yes,protrusion=quality,expansion=quality
+   cv01=yes, 
+   cv02=no,
+   ss12=no,
+   ss15=yes,]
+
+\definefontfeature[liga][liga=yes]
+
+\starttypescriptcollection[unifrakturmaguntia]
+
+\starttypescript [serif] [unifrakturmaguntia]
+       \setups[font:fallback:serif]
+       \definefontsynonym [Serif]           [file:UnifrakturMaguntia.ttf]         [features=unifrakturmaguntia-normal]
+\stoptypescript
+
+\starttypescript[unifrakturmaguntia]
+     \definetypeface [unifrakturmaguntia] [rm] [serif] [unifrakturmaguntia] [default]
+\stoptypescript
+
+\stoptypescriptcollection

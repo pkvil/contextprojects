@@ -2,13 +2,13 @@
 
 \mainlanguage[en]
 
-\setupbodyfont[arnopro,12pt]
+\setupbodyfont[etbb,12pt]
 %\definebodyfontenvironment[10pt][interlinespace=15pt]
-\definebodyfontenvironment[12pt][interlinespace=15pt]
+\definebodyfontenvironment[12pt][interlinespace=16pt]
 %39 lines
-\setupalign[hanging,hz,tolerant] % microtypography, allow some stretching
+\setupalign[hanging,tolerant] % microtypography, allow some stretching
 
-\definepapersize[sixnine][width=6in, height=9in]
+\definepapersize[sixnine][width=180mm, height=270mm]
 \setuppapersize[sixnine][sixnine]
 
 \def\bcor{0mm}
@@ -17,17 +17,17 @@
     grid=yes,
     location={middle,left},
    % TOP TO BOTTOM    
-    topspace=\dimexpr(\paperheight/9)\relax,
+    topspace=\dimexpr(\paperwidth/9)\relax,
     header=0\baselineskip,
     headerdistance=0\baselineskip,
-    height=\dimexpr(6\paperheight/9)+4\baselineskip\relax,
-    footerdistance=2\baselineskip,
-    footer=2\lineheight,
+    height=\dimexpr(204mm+2\baselineskip)\relax,
+    footerdistance=1\baselineskip,
+    footer=1\lineheight,
    % INNER TO OUTER
     backspace=\dimexpr(\paperwidth/9)+\bcor\relax,% onesided
     leftmargin=64pt,
     leftmargindistance=9pt,
-    width=\dimexpr(6\paperwidth/9)\relax,
+    width=118.5mm,
     rightmargin=64pt,
     rightmargindistance=16pt,
 ]
@@ -42,6 +42,8 @@
 
 \setupindenting[yes,medium] % indent paragraphs
 \setupspacing[packed] % French spacing
+
+\emergencystretch=8pt\relax
 
 %\showgrid
 

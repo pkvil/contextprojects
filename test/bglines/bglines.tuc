@@ -2,7 +2,7 @@ local utilitydata = { }
 
 utilitydata.comment={
  ["escape"]="[===[ ... ]===]",
- ["file"]="nicolas",
+ ["file"]="bglines",
  ["format"]="cont-en",
  ["stamp"]="2022.01.15 17:32",
  ["version"]=0x1.547ae147ae148p+0,
@@ -19,7 +19,7 @@ if not utilitydata.job.variables then utilitydata.job.variables = { } end
 
 utilitydata.job.variables.collected={
  ["macros"]={},
- ["randomseed"]=0x1.ce6833b6aea84p-2,
+ ["randomseed"]=0x1.cadf3489cff5ep-1,
  ["sectionblockorder"]={},
 }
 
@@ -27,12 +27,7 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.structure then utilitydata.job.structure = { } end
 
 utilitydata.job.structure.collected={
- ["branches"]={
-  {
-   ["name"]="nicolas-environment",
-   ["type"]="environment",
-  },
- },
+ ["branches"]={},
  ["name"]="",
  ["type"]="text",
 }
@@ -41,140 +36,11 @@ if not utilitydata.job then utilitydata.job = { } end
 if not utilitydata.job.positions then utilitydata.job.positions = { } end
 
 utilitydata.job.positions.collected={
- ["p"]={
-  {
-   ["i"]=1,
-   ["p"]=1,
-   ["pi"]=1179000,
-   ["r"]="textarea:1",
-   ["y"]=45862018,
-  },
-  {
-   ["i"]=2,
-   ["p"]=1,
-   ["pi"]=1179000,
-   ["r"]="textarea:1",
-   ["y"]=44813442,
-  },
-  42716290,
-  {
-   ["i"]=1,
-   ["p"]=1,
-   ["pi"]=1179000,
-   ["r"]="textarea:1",
-   ["y"]=35376258,
-  },
-  {
-   ["i"]=3,
-   ["p"]=2,
-   ["pi"]=1179000,
-   ["r"]="textarea:2",
-   ["y"]=45862018,
-  },
-  40619138,
-  29084802,
-  14404738,
-  {
-   ["i"]=1,
-   ["p"]=3,
-   ["pi"]=1179000,
-   ["r"]="textarea:3",
-   ["y"]=42716290,
-  },
-  33279106,
-  21744770,
-  13356162,
-  {
-   ["i"]=3,
-   ["p"]=4,
-   ["pi"]=1179000,
-   ["r"]="textarea:4",
-   ["y"]=44813442,
-  },
-  38521986,
-  25939074,
- },
- ["page"]={
-  {
-   ["h"]=50346354,
-   ["w"]=33564236,
-   ["x"]=0,
-   ["y"]=0,
-  },
- },
  ["shared"]={
   ["x_h_d"]={},
-  ["x_h_d_hs"]={
-   {
-    ["d"]=293600,
-    ["h"]=754976,
-    ["hs"]=22096455,
-    ["x"]=4908360,
-   },
-   {
-    ["d"]=293600,
-    ["h"]=754976,
-    ["hs"]=22096455,
-    ["x"]=3729360,
-   },
-   {
-    ["d"]=293600,
-    ["h"]=754976,
-    ["hs"]=22096455,
-    ["x"]=8917421,
-   },
-  },
-  ["x_y_w_h"]={
-   {
-    ["h"]=38039468,
-    ["w"]=22096455,
-    ["x"]=3729360,
-    ["y"]=8577526,
-   },
-   {
-    ["h"]=38039468,
-    ["w"]=22096455,
-    ["x"]=7738421,
-    ["y"]=8577526,
-   },
-  },
+  ["x_h_d_hs"]={},
+  ["x_y_w_h"]={},
   ["y_w_h_d"]={},
- },
- ["text"]={
-  {
-   ["i"]=1,
-   ["p"]=1,
-  },
-  {
-   ["i"]=2,
-   ["p"]=2,
-  },
-  {
-   ["i"]=1,
-   ["p"]=3,
-  },
-  {
-   ["i"]=2,
-   ["p"]=4,
-  },
- },
- ["textarea"]={
-  {
-   ["i"]=1,
-   ["p"]=1,
-  },
-  {
-   ["i"]=2,
-   ["p"]=2,
-  },
-  {
-   ["i"]=1,
-   ["p"]=3,
-  },
-  {
-   ["i"]=2,
-   ["p"]=4,
-  },
  },
  ["user"]={},
 }
@@ -250,10 +116,10 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["realpage"]={
-  { 4 },
+  { 1 },
  },
  ["subpage"]={
-  { 4 },
+  { 1 },
  },
  ["table"]={
   { 0 },
@@ -262,7 +128,7 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["userpage"]={
-  { 4 },
+  { 1 },
  },
 }
 
@@ -279,27 +145,6 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=1,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=2,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=3,
-  ["numberdata"]=1,
-  ["prefixdata"]=2,
-  ["state"]="start",
- },
- {
-  ["block"]="bodypart",
-  ["number"]=4,
   ["numberdata"]=1,
   ["prefixdata"]=2,
   ["state"]="start",
